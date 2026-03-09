@@ -60,47 +60,45 @@
 <?php require_once "footer.php"?>
 </div>
  <script>
-    function magic (){
-        const confirm=document.querySelector(".fact-popup"); 
-        const scroll1=document.querySelector(".fact-left");
-        const scroll2=document.querySelector(".fact-right"); 
-        const scroll3=document.querySelector(".fact-bottomright");            
-        const scroll4=document.querySelector(".fact-bottomleft");
+let lastScroll = 0;
 
+function magic(){
 
-     if (window.scrollY>10){
+  const fact1 = document.querySelector(".fact-left");
+  const fact2 = document.querySelector(".fact-right");
+  const fact3 = document.querySelector(".fact-bottomright");
+  const fact4 = document.querySelector(".fact-bottomleft");
 
+  const scrollingUp = window.scrollY < lastScroll;
 
-            confirm.style.display="block";
-        }
-        else{
-            confirm.style.display="none";
-        }
-        if (window.scrollY>20){
+  if(window.scrollY > 15 && !scrollingUp){
+    fact1.classList.add("show");
+  } else {
+    fact1.classList.remove("show");
+  }
 
-            scroll1.style.display="block";
-        }
-        else{
-            scroll1.style.display="none";
-        }
-        if (window.scrollY>45){
-             scroll2.style.display="block";
-        } else{
-            scroll2.style.display="none";
+  if(window.scrollY > 30 && !scrollingUp){
+    fact2.classList.add("show");
+  } else {
+    fact2.classList.remove("show");
+  }
+
+  if(window.scrollY > 45 && !scrollingUp){
+    fact3.classList.add("show");
+  } else {
+    fact3.classList.remove("show");
+  }
+
+  if(window.scrollY > 60 && !scrollingUp){
+    fact4.classList.add("show");
+  } else {
+    fact4.classList.remove("show");
+  }
+
+  lastScroll = window.scrollY;
 }
-        if (window.scrollY>60){
-            scroll3.style.display="block";
-        } else{
-            scroll3.style.display="none";
-}
-        if (window.scrollY>90){
-             scroll4.style.display="block";
-        } else{
-            scroll4.style.display="none";
-       
-    }
-}
-    window.addEventListener('scroll',magic);
+
+window.addEventListener("scroll", magic);
  </script>
 </body>
 </html>
