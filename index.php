@@ -18,9 +18,11 @@
     <div class="header">
         <img class="logo" src="Assets/Images/Sheffield.jpg" alt="Logo of website">
         <h1>Welcome To Sheffield</h1>
-        <img class="logo" src="Assets/Images/Sheffield.jpg" alt="Logo of website" height="30px">
+        <img class="logo" src="Assets/Images/Sheffield.jpg" alt="Logo of website" height="30px" style="transform: scaleX(-1);">
     </div>
-
+    <div class="steel">
+        <h2>...so you want to move to the Steel City?</h2></div>
+ 
      
 </div> 
 <?php require_once "footer.php"?>
