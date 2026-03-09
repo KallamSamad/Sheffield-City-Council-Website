@@ -77,6 +77,7 @@
 
 <?php require_once "footer.php"?>
 </div>
+<<<<<<< HEAD
 
 <script>
 let lastScroll = 0;
