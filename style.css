@@ -60,6 +60,7 @@ nav{
     padding-top: 50px;
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
 #carouselExample {
   width: 100%;
@@ -85,4 +86,52 @@ nav{
   height: 400px;
   margin: 50px auto; 
   overflow: hidden;
+}
+
+.fact-popup{
+    font-size: small !important;
+    padding: 10px;
+    font-weight:600;
+    width: 300px;
+    background-color:#E6D6FF;
+    position: fixed;
+    border-radius: 20px;
+}
+
+.fact-right{
+    font-size: small !important;
+    padding: 10px;
+    font-weight:600;
+    width: 300px;
+    background-color:#F7C8E0;
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+}
+.fact-bottomright{
+    font-size: small !important;
+    padding: 10px;
+    font-weight:600;
+    width: 300px;
+    background-color:#C8F7E4;
+    position: fixed;
+    right: 20px;
+    top: 90%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+}
+
+.fact-bottomleft{
+    font-size: small !important;
+    padding: 10px;
+    font-weight:600;
+    width: 300px;
+    background-color:#CFE8FF;
+    position: fixed;
+    left: 20px;
+    top: 90%;
+    transform: translateY(-50%);
+    border-radius: 20px;
 }
