@@ -59,6 +59,48 @@
 </div> 
 <?php require_once "footer.php"?>
 </div>
- 
+ <script>
+    function magic (){
+        const confirm=document.querySelector(".fact-popup"); 
+        const scroll1=document.querySelector(".fact-left");
+        const scroll2=document.querySelector(".fact-right"); 
+        const scroll3=document.querySelector(".fact-bottomright");            
+        const scroll4=document.querySelector(".fact-bottomleft");
+
+
+     if (window.scrollY>10){
+
+
+            confirm.style.display="block";
+        }
+        else{
+            confirm.style.display="none";
+        }
+        if (window.scrollY>20){
+
+            scroll1.style.display="block";
+        }
+        else{
+            scroll1.style.display="none";
+        }
+        if (window.scrollY>45){
+             scroll2.style.display="block";
+        } else{
+            scroll2.style.display="none";
+}
+        if (window.scrollY>60){
+            scroll3.style.display="block";
+        } else{
+            scroll3.style.display="none";
+}
+        if (window.scrollY>90){
+             scroll4.style.display="block";
+        } else{
+            scroll4.style.display="none";
+       
+    }
+}
+    window.addEventListener('scroll',magic);
+ </script>
 </body>
 </html>
