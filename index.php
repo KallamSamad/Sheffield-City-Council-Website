@@ -22,8 +22,14 @@
         <img class="logo" src="Assets/Images/Sheffield.jpg" alt="Logo of website" height="30px" style="transform: scaleX(-1);">
     </div>
     <div class="steel">
-        <h2>...so you want to move to the Steel City?</h2></div>
-                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <h2 >...so you want to move to the Steel City?</h2></div>
+        <div class="fact-popup">
+            <div class="fact-left">Sheffield was once the steel-making capital of the world. </div>
+        <div class="fact-right">Sheffield has five rivers running through it: the Don, Sheaf, Rivelin, Loxley, and Porter. </div>
+        <div class="fact-bottomright">The name Sheffield is derived from the River Sheaf, which runs through the city. </div>
+                <div class="fact-bottomleft">Many locals claim or joke that the city is built on seven hills, just like Rome. </div></div>
+
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
             <img src="Assets/Images/meadowhall.jpg" class="d-block w-100" alt="An image of meadowhall">
@@ -38,6 +44,7 @@
             <img src="Assets/Images/arial.jpg" class="d-block w-100" alt="Arial shot of Sheffie;d">
             </div>
         </div>
+         
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </button>
@@ -45,6 +52,8 @@
             <span class="carousel-control-next-icon"></span>
         </button>
         </div>
+                  
+
  
      
 </div> 
