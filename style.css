@@ -1,6 +1,7 @@
 html, body {  
   margin: 0;  
   padding: 0;  
+  background-color: #F0EFEF;
 }  
 * {  
   box-sizing: border-box;  
@@ -17,6 +18,8 @@ p, h1, h2, h3, ul {
 }
 .sandwich{
     flex: 1;
+    align-items: center;
+    
 }
 
 .header{
@@ -40,6 +43,10 @@ p, h1, h2, h3, ul {
     flex: none;
 }
 
+.middle{
+    background-color: #F0EFEF;
+}
+
 nav{
     background-color: maroon;
 }
@@ -47,4 +54,10 @@ nav{
 .logo{
     height: 30%;
     width: 30%;
+}
+
+.steel{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
 }
