@@ -24,10 +24,12 @@
     <div class="steel">
         <h2 >...so you want to move to the Steel City?</h2></div>
         <div class="fact-popup">
-            <div class="fact-left">Sheffield was once the steel-making capital of the world. </div>
-        <div class="fact-right">Sheffield has five rivers running through it: the Don, Sheaf, Rivelin, Loxley, and Porter. </div>
-        <div class="fact-bottomright">The name Sheffield is derived from the River Sheaf, which runs through the city. </div>
-                <div class="fact-bottomleft">Many locals claim or joke that the city is built on seven hills, just like Rome. </div></div>
+        <div class="fact-left">Sheffield was once the <b>steel-making capital</b> of the world. </div>
+        <div class="fact-right">Sheffield has five rivers running through it: the <b>Don</b>, <b>Sheaf</b>, <b>Rivelin</b>, <b>Loxley</b>, and <b>Porter</b>. </div>
+        <div class="fact-bottomright">The name Sheffield is derived from the <b>River Sheaf</b>, which runs through the city. </div>
+        <div class="fact-bottomleft">Sheffield is built on <b>seven hills</b>, just like Rome. </div>
+        <div class="fact-topleft">Sheffield is the <b>4th Biggest city</b> in England. </div>
+        <div class="fact-topright"><b>Sheffield F.C.</b> is the world's <b>oldest</b> football club. </div></div>
 
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -68,8 +70,10 @@ function magic(){
   const fact2 = document.querySelector(".fact-right");
   const fact3 = document.querySelector(".fact-bottomright");
   const fact4 = document.querySelector(".fact-bottomleft");
+  const fact5 = document.querySelector(".fact-topright");
+  const fact6= document.querySelector(".fact-topleft");
 
-  const scrollingUp = window.scrollY < lastScroll;
+  const scrollingUp = window.scrollY < lastScroll; 
 
   if(window.scrollY > 15 && !scrollingUp){
     fact1.classList.add("show");
@@ -94,6 +98,18 @@ function magic(){
   } else {
     fact4.classList.remove("show");
   }
+   if(window.scrollY > 70 && !scrollingUp){
+    fact5.classList.add("show");
+  } else {
+    fact5.classList.remove("show");
+  }
+
+   if(window.scrollY > 10 && !scrollingUp){
+    fact6.classList.add("show");
+  } else {
+    fact6.classList.remove("show");
+  }
+
 
   lastScroll = window.scrollY;
 }
