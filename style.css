@@ -71,6 +71,7 @@ nav {
 
 #carouselExample {
   width: 50%;
+  height: 400px;
   margin: 50px auto;
   overflow: hidden;
   border-radius: 8px;
@@ -91,7 +92,7 @@ nav {
   position: fixed;
   border-radius: 20px;
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 0.8s ease;
 }
 
 .fact-popup,
@@ -99,6 +100,7 @@ nav {
   background-color: #E6D6FF;
   left: 20px;
   top: 50%;
+  transform: translateY(-50%);
   transition-delay: 1s;
 }
 
@@ -106,21 +108,24 @@ nav {
   background-color: #F7C8E0;
   right: 20px;
   top: 50%;
-  transition-delay: 1.5s;
-}
-
-.fact-bottomleft {
-  background-color: #CFE8FF;
-  left: 20px;
-  top: 70%;
-  transition-delay: 2s;
+  transform: translateY(-50%);
+  transition-delay: 1.4s;
 }
 
 .fact-bottomright {
   background-color: #C8F7E4;
   right: 20px;
   top: 70%;
-  transition-delay: 2.5s;
+  transform: translateY(-50%);
+  transition-delay: 2.6s;
+}
+
+.fact-bottomleft {
+  background-color: #CFE8FF;
+  left: 20px;
+  top: 70%;
+  transform: translateY(-50%);
+  transition-delay: 3.9s;
 }
 
 .fact-topleft {
