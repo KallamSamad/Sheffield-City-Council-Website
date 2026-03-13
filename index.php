@@ -64,23 +64,39 @@
  <script>
 let lastScroll = 0;
 
-const facts = [
+const cityFacts = [
 "Sheffield earned the nickname 'Steel City' because of its world-famous steel and cutlery industry.",
 "Around 61% of Sheffield is green space, filled with parks, woodlands, and gardens.",
 "Sheffield is built on seven hills, which people jokingly compare to Rome.",
 "Despite being a large city, Sheffield is sometimes called the 'largest village in England' because of its friendly community feel.",
+"The city of Sheffield is named after the River Sheaf, which flows through the area.",
+"Sheffield is one of the largest cities in the United Kingdom by geographic area.",
+"The city officially received its city status in 1893.",
+"People have lived in the Sheffield area since the last Ice Age.",
+"Sheffield hosted the World University Games in 1991, bringing international athletes to the city.",
+"Sheffield was twinned with the city of Donetsk in 1956 during the Cold War.",
+"Sheffield’s large student population gives the city a young and energetic atmosphere.",
+"Many students say Sheffield has one of the friendliest student communities in the UK."
+];
+const foodFacts = [
 "Yorkshire pudding is a famous local dish often served with roast dinners or even as a dessert.",
 "Henderson’s Relish is a spicy Sheffield sauce created by Henry Henderson in the 1800s and still loved by locals today.",
 "A Hendos pie is a local meat pie flavoured with the famous Henderson’s Relish.",
 "The Sheffield fishcake is a regional dish made from fish layered between slices of potato, battered and deep fried.",
 "Sheffield has a strong brewing tradition and is home to many popular independent breweries.",
-"Parkin is a traditional Northern gingerbread cake made with oats, treacle, and ginger.",
+"Parkin is a traditional Northern gingerbread cake made with oats, treacle, and ginger."
+];
+const industryFacts = [
 "Sheffield Plate was a silver-plating technique invented in the city during the 1700s.",
 "Henry Bessemer developed the Bessemer Process in Sheffield, which revolutionised mass steel production.",
 "Harry Brearley discovered stainless steel in Sheffield in 1913 while experimenting with alloys.",
 "Industrialist John Brown became known as the father of the South Yorkshire iron trade.",
 "The Advanced Manufacturing Research Centre in Sheffield works with companies like Boeing on aerospace technology.",
 "Metal tuning forks have been manufactured in Sheffield since 1841 for music and scientific testing.",
+"The Sheffield Blitz during World War II saw German bombing raids heavily damage the city.",
+"The Women of Steel statue honours the women who worked in Sheffield’s steel factories during wartime."
+];
+const cultureFacts = [
 "The Arctic Monkeys are one of the most famous rock bands to come from Sheffield.",
 "The Human League, a pioneering synth-pop band, formed in Sheffield in 1977.",
 "Joe Cocker, a Grammy-winning singer with a powerful blues voice, was born in Sheffield.",
@@ -88,36 +104,21 @@ const facts = [
 "Def Leppard, a globally successful heavy metal band, was formed in Sheffield.",
 "The Thompson Twins were a pop group from Sheffield that became popular during the 1980s.",
 "The band ABC also came from Sheffield and produced several classic 1980s pop hits.",
-"Sheffield is represented by three football teams: Sheffield FC, Sheffield United, and Sheffield Wednesday.",
-"Bramall Lane is one of the oldest football stadiums in the world and the home of Sheffield United.",
-"Sheffield FC, founded in 1857, is recognised by FIFA as the oldest football club in the world.",
-"One early Sheffield FA Cup match was famously decided by a coin toss.",
-"Sheffield United scored the first goal in Premier League history in 1992.",
-"Sheffield United are nicknamed 'The Blades' in reference to the city’s cutlery-making history.",
-"Sheffield Wednesday is the only professional football club in the world named after a day of the week.",
-"The Steel City Derby is the fierce football rivalry between Sheffield United and Sheffield Wednesday.",
-"The city of Sheffield is named after the River Sheaf, which flows through the area.",
+"World champion boxer Prince Naseem Hamed is one of the many athletes who came from Sheffield.",
+"The Crucible Theatre in Sheffield hosts the annual World Snooker Championship.",
+"The Sheffield Steelers are a successful professional ice hockey team based in the city."
+];
+const natureFacts = [
 "Around one third of Sheffield lies within the Peak District National Park.",
 "The city contains hundreds of parks and green spaces, with estimates of over 250 across the region.",
 "Sheffield has around 4.5 million trees, meaning there are actually more trees than people.",
-"Sheffield is one of the largest cities in the United Kingdom by geographic area.",
-"The city officially received its city status in 1893.",
-"People have lived in the Sheffield area since the last Ice Age.",
-"The Sheffield Blitz during World War II saw German bombing raids heavily damage the city.",
-"Sheffield hosted the World University Games in 1991, bringing international athletes to the city.",
 "Blake Street is one of the steepest residential streets in England.",
 "The lowest recorded temperature in Sheffield was −8.2°C in 2010.",
-"The Crucible Theatre in Sheffield hosts the annual World Snooker Championship.",
-"The city has two major universities: the University of Sheffield and Sheffield Hallam University.",
-"The Sheffield Steelers are a successful professional ice hockey team based in the city.",
-"The grand Henry Willis III organ in Sheffield City Hall contains more than 4,000 pipes.",
-"Sheffield was twinned with the city of Donetsk in 1956 during the Cold War.",
-"The Women of Steel statue honours the women who worked in Sheffield’s steel factories during wartime.",
 "The Sheffield Botanical Gardens cover 19 acres and contain more than 5,000 plant species.",
 "Sheffield uses district heating technology that converts waste into energy to heat homes and buildings.",
-"The Sheffield Walk of Fame outside the Town Hall celebrates famous people from the city.",
-"World champion boxer Prince Naseem Hamed is one of the many athletes who came from Sheffield.",
-"Park Hill Flats are one of Europe’s largest Brutalist architecture projects.",
+"Park Hill Flats are one of Europe’s largest Brutalist architecture projects."
+];
+const studentFacts = [
 "More than 60,000 students study in Sheffield across its two universities.",
 "The University of Sheffield is part of the prestigious Russell Group of research universities.",
 "Sheffield Hallam University has one of the largest student populations in the UK.",
@@ -146,7 +147,6 @@ const facts = [
 "Varsity events attract thousands of spectators every year.",
 "Many students volunteer in community projects and local charities.",
 "The city provides many late-night study spaces and libraries during exam periods.",
-"Sheffield’s large student population gives the city a young and energetic atmosphere.",
 "Restaurants and shops across the city often offer student discounts.",
 "The Students’ Union building includes cafes, shops, bars, and social spaces.",
 "Students often enjoy discounted cinema nights around the city.",
@@ -156,12 +156,10 @@ const facts = [
 "Sheffield has a strong student cycling culture with many bike routes.",
 "The Botanical Gardens are a popular place for student picnics and walks.",
 "Career fairs and networking events help students connect with employers.",
-"Both universities offer internships and placement opportunities with local companies.",
-"Many students say Sheffield has one of the friendliest student communities in the UK."
+"Both universities offer internships and placement opportunities with local companies."
 ];
 
   
-console.log(facts.length);
 function magic(){
 
   const fact1 = document.querySelector(".fact-left");
@@ -171,51 +169,51 @@ function magic(){
   const fact5 = document.querySelector(".fact-topright");
   const fact6= document.querySelector(".fact-topleft");
 
-  const random1=Math.floor(Math.random()*93);
-  const random2=Math.floor(Math.random()*93);
-  const random3=Math.floor(Math.random()*93);
-  const random4=Math.floor(Math.random()*93);
-  const random5=Math.floor(Math.random()*93);
-  const random6=Math.floor(Math.random()*93);
+  const random1=Math.floor(Math.random()*cityFacts.length);
+  const random2=Math.floor(Math.random()*foodFacts.length);
+  const random3=Math.floor(Math.random()*industryFacts.length);
+  const random4=Math.floor(Math.random()*cultureFacts.length);
+  const random5=Math.floor(Math.random()*natureFacts.length);
+  const random6=Math.floor(Math.random()*studentFacts.length);
 
   const scrollingUp = window.scrollY < lastScroll; 
 
   if(window.scrollY > 15 && !scrollingUp){
-    fact1.textContent=facts[random1];
+    fact1.innerHTML=`<h5 style="text-align: center"><b>City Fact</b></h5> <div style="font-size: 14px">${cityFacts[random1]}</div>`;
     fact1.classList.add("show");
   } else {
     fact1.classList.remove("show");
   }
 
   if(window.scrollY > 30 && !scrollingUp){
-    fact2.textContent=facts[random2];
+    fact2.innerHTML=`<h5 style="text-align: center"><b>Food Facts</b></h5> <div style="font-size: 14px">${foodFacts[random2]}</div>`;
     fact2.classList.add("show");
   } else {
     fact2.classList.remove("show");
   }
 
   if(window.scrollY > 45 && !scrollingUp){
-    fact3.textContent=facts[random3];
+    fact3.innerHTML=`<h5 style="text-align: center"><b>Industry Facts</b></h5>  <div style="font-size: 14px">${industryFacts[random3]}</div>`;
     fact3.classList.add("show");
   } else {
     fact3.classList.remove("show");
   }
 
   if(window.scrollY > 60 && !scrollingUp){
-      fact4.textContent=facts[random4];  
+      fact4.innerHTML=`<h5 style="text-align: center"><b>Culture Fact</b></h5>  <div style="font-size: 14px">${cultureFacts[random4]}</div>`;
       fact4.classList.add("show");
   } else {
     fact4.classList.remove("show");
   }
    if(window.scrollY > 70 && !scrollingUp){
-    fact5.textContent=facts[random5];
+    fact5.innerHTML=`<h5 style="text-align: center"><b>Nature Facts</b></h5> <div style="font-size: 14px"> ${natureFacts[random5]}</div>`;
     fact5.classList.add("show");
   } else {
     fact5.classList.remove("show");
   }
 
    if(window.scrollY > 30 && !scrollingUp){
-    fact6.textContent=facts[random6];
+    fact6.innerHTML=`<h5 style="text-align: center"><b>Student Facts</b></h5>  <div style="font-size: 14px">${studentFacts[random6]}</div>`;
     fact6.classList.add("show");
   } else {
     fact6.classList.remove("show");
