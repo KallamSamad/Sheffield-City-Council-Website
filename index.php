@@ -10,7 +10,7 @@
         crossorigin="anonymous">
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Sheffield</title>
+    <title>Study in Sheffield</title>
 </head>
 <?php require_once "nav.php"?>
 <body>
@@ -18,7 +18,7 @@
 <div class="sandwich">    
     <div class="header">
         <img class="logo" src="Assets/Images/Sheffield.jpg" alt="Logo of website">
-        <h1>Welcome To Sheffield</h1>
+        <h1>Study In Sheffield</h1>
         <img class="logo" src="Assets/Images/Sheffield.jpg" alt="Logo of website" height="30px" style="transform: scaleX(-1);">
     </div>
     <div class="steel">
