@@ -140,3 +140,17 @@ nav {
   flex-direction: column !important;
   align-items: center !important;
 }
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: maroon;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
