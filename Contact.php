@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+ 
 <body>
-<?php require_once 'nav.php'; ?> 
+    <?php require_once 'nav.php'; ?> 
 <!-- Contact Content -->
 <div class="page">
 
@@ -39,11 +40,8 @@
 
 </div>
 
-</div> 
 <?php require_once "footer.php"?>
-</div>
- <script>
-let lastScroll = 0;
+
 
 </body>
 </html>
