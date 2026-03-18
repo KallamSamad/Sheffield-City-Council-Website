@@ -6,13 +6,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
- 
 <body>
-<<<<<<< HEAD
 <?php require_once 'nav.php'; ?>
 
-=======
->>>>>>> 4837e015c942895206f6423983972cf1558e16bd
 <!-- Contact Content -->
 <div class="page">
     <h1>Contact Us</h1>
@@ -39,12 +35,7 @@
     </form>
 </div>
 
-<<<<<<< HEAD
 <?php require_once "footer.php"; ?>
-=======
-<?php require_once "footer.php"?>
->>>>>>> 4837e015c942895206f6423983972cf1558e16bd
-
 
 </body>
 </html>
