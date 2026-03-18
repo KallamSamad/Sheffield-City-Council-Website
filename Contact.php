@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
  
 <body>
-    <?php require_once 'nav.php'; ?> 
+<<<<<<< HEAD
+<?php require_once 'nav.php'; ?>
+
+=======
+>>>>>>> 4837e015c942895206f6423983972cf1558e16bd
 <!-- Contact Content -->
 <div class="page">
-
     <h1>Contact Us</h1>
 
     <div class="contact-info">
@@ -24,7 +26,6 @@
     <h2>Send us a message</h2>
 
     <form>
-
         <label for="name">Name</label><br>
         <input type="text" id="name" name="name"><br><br>
 
@@ -35,12 +36,14 @@
         <textarea id="message" name="message" rows="5"></textarea><br><br>
 
         <button type="submit">Submit</button>
-
     </form>
-
 </div>
 
+<<<<<<< HEAD
+<?php require_once "footer.php"; ?>
+=======
 <?php require_once "footer.php"?>
+>>>>>>> 4837e015c942895206f6423983972cf1558e16bd
 
 
 </body>
