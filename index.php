@@ -45,18 +45,19 @@
   
           </div>
             <div class="carousel-item">
-            <img src="Assets/Images/citycenter.jpg" class="d-block w-100" alt="Peaks">
+            <img src="Assets/Images/citycenter.jpg" class="d-block w-100" alt="An image of City Center Sheffield">
             <div class="carousel-caption-custom">©Doug Banks commissioned for Marketing Sheffield</div>
   
           </div>
             <div class="carousel-item">
-            <img src="Assets/Images/parkhill.jpg" class="d-block w-100" alt="Brahmall lane">
+            <img src="Assets/Images/parkhill.jpg" class="d-block w-100" alt="Parkhill flats ">
             <div class="carousel-caption-custom">© Marketing Sheffield</div>
   
           </div>
             <div class="carousel-item">
-            <img src="Assets/Images/arial.jpg" class="d-block w-100" alt="Arial shot of Sheffie;d">
-            </div>
+            <img src="Assets/Images/arial.jpg" class="d-block w-100" alt="Skyscrapers in sheffie;d">
+          <div class="carousel-caption-custom">© Marketing Sheffield</div>  
+          </div>
         </div>
          
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
