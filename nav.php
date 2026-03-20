@@ -14,7 +14,7 @@
 <a class="nav-link text-white" href="Contact.php" ><img class="icon" src= "Assets/Images/contact.svg"  height="60px" width="60px" >Contact</a>
 </li>
 <li class="nav-item">
-<a class="nav-link text-white" href="#"><img class="icon" src= "Assets/Images/transport.svg"  height="60px" width="60px" >Transport Links</a>
+<a class="nav-link text-white" href="#"><img class="icon" src= "Assets/Images/gallery.svg"  height="60px" width="60px" >Gallery</a>
 </li>
 
 <li class="nav-item">
