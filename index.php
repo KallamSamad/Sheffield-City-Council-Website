@@ -191,7 +191,7 @@ function magic(){
 
   const scrollingUp = window.scrollY < lastScroll; 
 
-  if((window.scrollY/100)*100 > 100 && !scrollingUp){
+  if (window.scrollY > 800 && !scrollingUp){
     fact1.innerHTML=`<h5 style="text-align: center"><b>City Fact</b></h5> <div style="font-size: 14px">${cityFacts[random1]}</div>`;
     fact1.classList.add("show");
     fact2.innerHTML=`<h5 style="text-align: center"><b>Food Fact</b></h5> <div style="font-size: 14px">${foodFacts[random2]}</div>`;
