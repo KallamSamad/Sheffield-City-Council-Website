@@ -18,9 +18,15 @@
 <div class="sandwich">    
     <div class="header">
         <img class="logo" src="Assets/Images/Sheffield.jpg" alt="Logo of website">
-        <h1>Study In Sheffield</h1>
-        <img class="logo" src="Assets/Images/Sheffield.jpg" alt="Logo of website" height="30px" style="transform: scaleX(-1);">
-    </div>
+        <h1 style="text-align:center;">Study In Sheffield</h1>
+        <img class="logo" src="Assets/Images/Sheffield.jpg" alt="Logo of website" height="20px" style="transform: scaleX(-1);">
+      </div>
+<div class="caption">
+  <p>Image by © Doug Banks Photography</p>
+  <p>Image by © Doug Banks Photography</p>
+</div>
+   
+
     <div class="steel">
         <h2 >...so you want to move to the Steel City?</h2></div>
         <div class="fact-popup">
@@ -34,14 +40,20 @@
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <img src="Assets/Images/meadowhall.jpg" class="d-block w-100" alt="An image of meadowhall">
-            </div>
+            <img src="Assets/Images/xmasmark1.jpg" class="d-block w-100" alt="An image of Chistmas market" height="20%" width="50%">
+            <div class="carousel-caption-custom">Photo by John Smith / Marketing Sheffield</div>
+  
+          </div>
             <div class="carousel-item">
-            <img src="Assets/Images/peakdistrict.jpg" class="d-block w-100" alt="Peaks">
-            </div>
+            <img src="Assets/Images/citycenter.jpg" class="d-block w-100" alt="Peaks">
+            <div class="carousel-caption-custom">©Doug Banks commissioned for Marketing Sheffield</div>
+  
+          </div>
             <div class="carousel-item">
-            <img src="Assets/Images/bramlane.jpg" class="d-block w-100" alt="Brahmall lane">
-            </div>
+            <img src="Assets/Images/parkhill.jpg" class="d-block w-100" alt="Brahmall lane">
+            <div class="carousel-caption-custom">© Marketing Sheffield</div>
+  
+          </div>
             <div class="carousel-item">
             <img src="Assets/Images/arial.jpg" class="d-block w-100" alt="Arial shot of Sheffie;d">
             </div>
