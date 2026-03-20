@@ -198,34 +198,34 @@ function magic(){
     fact1.classList.remove("show");
   }
 
-  if(window.scrollY > 50 && !scrollingUp){
+  if(window.scrollY > 80 && !scrollingUp){
     fact2.innerHTML=`<h5 style="text-align: center"><b>Food Fact</b></h5> <div style="font-size: 14px">${foodFacts[random2]}</div>`;
     fact2.classList.add("show");
   } else {
     fact2.classList.remove("show");
   }
 
-  if(window.scrollY > 60 && !scrollingUp){
+  if(window.scrollY > 90 && !scrollingUp){
     fact3.innerHTML=`<h5 style="text-align: center"><b>Industry Fact</b></h5>  <div style="font-size: 14px">${industryFacts[random3]}</div>`;
     fact3.classList.add("show");
   } else {
     fact3.classList.remove("show");
   }
 
-  if(window.scrollY > 70 && !scrollingUp){
+  if(window.scrollY > 100 && !scrollingUp){
       fact4.innerHTML=`<h5 style="text-align: center"><b>Culture Fact</b></h5>  <div style="font-size: 14px">${cultureFacts[random4]}</div>`;
       fact4.classList.add("show");
   } else {
     fact4.classList.remove("show");
   }
-   if(window.scrollY > 80 && !scrollingUp){
+   if(window.scrollY > 110 && !scrollingUp){
     fact5.innerHTML=`<h5 style="text-align: center"><b>Nature Fact</b></h5> <div style="font-size: 14px"> ${natureFacts[random5]}</div>`;
     fact5.classList.add("show");
   } else {
     fact5.classList.remove("show");
   }
 
-   if(window.scrollY > 90 && !scrollingUp){
+   if(window.scrollY > 120 && !scrollingUp){
     fact6.innerHTML=`<h5 style="text-align: center"><b>Student Fact</b></h5>  <div style="font-size: 14px">${studentFacts[random6]}</div>`;
     fact6.classList.add("show");
   } else {
