@@ -51,7 +51,13 @@ function initMap() {
 <script>
 const click= document.querySelector(".btn");
 
-click.addEventListener("click",()=>console.log("clicked"));
+click.addEventListener("click",function(){
+const input = document.querySelector(".search").value;
+console.log(input);
+
+});
+
+
 
 </script>
 
