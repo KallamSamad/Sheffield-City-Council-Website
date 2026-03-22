@@ -48,6 +48,12 @@ function initMap() {
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFpTtip1nCtMFzMFCf-QR-fmdl1JftMmg&callback=initMap">
 </script>
 
+<script>
+const click= document.querySelector(".btn");
+
+click.addEventListener("click",()=>console.log("clicked"));
+
+</script>
 
  
 </div> 
