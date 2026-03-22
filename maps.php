@@ -28,6 +28,7 @@
 <script>
 let map;
 let geocoder;
+let marker;
 function initMap() {
   const sheffield = { lat: 53.3811, lng: -1.4701 };
    geocoder=new google.maps.Geocoder();
@@ -36,7 +37,7 @@ function initMap() {
     zoom: 12
   });
  
-  new google.maps.Marker({
+  marker=new google.maps.Marker({
     position: sheffield,
     map: map,
     title: "Sheffield"
@@ -74,8 +75,15 @@ geocoder.geocode(request,function(results,status){
         map = new google.maps.Map(document.getElementById("map"), {
             center: newplace,
             zoom: 15
+        
   });
-    }
+    marker=new google.maps.Marker({
+    position: newplace,
+    map: map,
+    title: input
+  });
+}
+
     else{
         console.log("none found");
     }
