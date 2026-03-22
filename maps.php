@@ -16,10 +16,12 @@
 <body>
  <h3 style="text-align: center;">Explore Sheffield</h3>
 
+
  <div class="map-wrapper">
 <div class="search-wrapper"> 
 <input class="search" type="text" placeholder="Search a location">
 <input class="btn" type="button" value="Search">
+ <div class="error" style="color: red;"></div>
 </div>
 <div id="map"></div>
 
@@ -52,6 +54,7 @@ function initMap() {
 </script>
 
 <script>
+ 
 const click= document.querySelector(".btn");
  
 click.addEventListener("click",function(){
@@ -74,18 +77,23 @@ geocoder.geocode(request,function(results,status){
 
         map = new google.maps.Map(document.getElementById("map"), {
             center: newplace,
-            zoom: 15
+            zoom: 20
         
   });
     marker=new google.maps.Marker({
     position: newplace,
     map: map,
-    title: input
+    title: input,
+
+    
   });
+  const error = document.querySelector(".error");
+  error.innerHTML=" ";
 }
 
     else{
-        console.log("none found");
+        const error = document.querySelector(".error");
+        error.innerHTML="Not Found";
     }
 })
 
