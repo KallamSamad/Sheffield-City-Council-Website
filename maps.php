@@ -56,7 +56,11 @@ const click= document.querySelector(".btn");
 click.addEventListener("click",function(){
 const input = document.querySelector(".search").value;
 console.log(input);
-geocoder.geocode(input);
+
+request={
+    address: input
+}
+geocoder.geocode(request);
 
 });
 
