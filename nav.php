@@ -7,7 +7,7 @@
 </li>
 
 <li class="nav-item">
-<a class="nav-link text-white" href="#"><img class="icon" src= "Assets/Images/map.svg"  height="60px" width="60px" >Map</a>
+<a class="nav-link text-white" href="maps.php"><img class="icon" src= "Assets/Images/map.svg"  height="60px" width="60px" >Map</a>
 </li>
 
 <li class="nav-item">
