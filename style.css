@@ -189,3 +189,23 @@ button {
 .map-wrapper {
   padding: 40px;
 }
+
+.search-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 5px;
+  background-color: #cbf7cd !important;
+  padding: 10px;
+}
+.btn{
+  width: 100px;
+  height: 50px;
+  background-color: maroon !important;
+  border-radius: 20px;
+  color: #ffcfcf !important;
+}
+.search{
+  width: 500px;
+  height: 50px;
+}
