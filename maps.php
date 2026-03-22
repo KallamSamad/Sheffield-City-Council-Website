@@ -69,6 +69,12 @@ geocoder.geocode(request,function(results,status){
         long=placelocation.lng();
         console.log(lat);
         console.log(long);
+        const newplace = { lat: lat, lng: long };
+
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: newplace,
+            zoom: 15
+  });
     }
     else{
         console.log("none found");
