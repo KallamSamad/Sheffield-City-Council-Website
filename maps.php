@@ -26,14 +26,16 @@
 </div>
 
 <script>
+let map;
+let geocoder;
 function initMap() {
   const sheffield = { lat: 53.3811, lng: -1.4701 };
-
-  const map = new google.maps.Map(document.getElementById("map"), {
+   geocoder=new google.maps.Geocoder();
+   map = new google.maps.Map(document.getElementById("map"), {
     center: sheffield,
     zoom: 12
   });
-
+ 
   new google.maps.Marker({
     position: sheffield,
     map: map,
@@ -50,10 +52,11 @@ function initMap() {
 
 <script>
 const click= document.querySelector(".btn");
-
+ 
 click.addEventListener("click",function(){
 const input = document.querySelector(".search").value;
 console.log(input);
+geocoder.geocode(input);
 
 });
 
@@ -62,7 +65,7 @@ console.log(input);
 </script>
 
  
-</div> 
+<div> 
 <?php require_once "footer.php"?>
 </div>
  
