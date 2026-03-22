@@ -77,7 +77,7 @@ geocoder.geocode(request,function(results,status){
 
         map = new google.maps.Map(document.getElementById("map"), {
             center: newplace,
-            zoom: 20
+            zoom: 16
         
   });
     marker=new google.maps.Marker({
