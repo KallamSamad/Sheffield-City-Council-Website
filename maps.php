@@ -60,10 +60,22 @@ console.log(input);
 request={
     address: input
 }
-geocoder.geocode(request);
+
+
+geocoder.geocode(request,function(results,status){
+    if (status=="OK"){
+        placelocation=(results[0].geometry.location);
+        lat=placelocation.lat();
+        long=placelocation.lng();
+        console.log(lat);
+        console.log(long);
+    }
+    else{
+        console.log("none found");
+    }
+})
 
 });
-
 
 
 </script>
