@@ -31,6 +31,7 @@ p, h1, h2, h3, ul {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .footer {
