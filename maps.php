@@ -15,8 +15,15 @@
 <?php require_once "nav.php"?>
 <body>
  <h3 style="text-align: center;">Explore Sheffield</h3>
-<div class="map-wrapper">
-<div id="map"></div></div>
+
+ <div class="map-wrapper">
+<div class="search-wrapper"> 
+<input class="search" type="text" placeholder="Search a location">
+<input class="btn" type="button" value="Search">
+</div>
+<div id="map"></div>
+
+</div>
 
 <script>
 function initMap() {
