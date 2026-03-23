@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="SoftwareProjectDB.DB" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1728"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="Courses" custom_title="0" dock_id="1" table="4,7:mainCourses"/><dock_state state="000000ff00000000fd00000001000000020000024800000213fc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000000002480000011e00ffffff000002480000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Courses" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="60"/><column index="2" value="78"/><column index="3" value="300"/><column index="4" value="109"/><column index="5" value="300"/><column index="6" value="78"/><column index="7" value="72"/><column index="8" value="90"/><column index="9" value="145"/><column index="10" value="300"/><column index="11" value="69"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">CREATE TABLE IF NOT EXISTS Courses (
+    CourseID INTEGER PRIMARY KEY AUTOINCREMENT,
+    UniversityID INTEGER,
+    CourseName TEXT NOT NULL,
+    StudyLevel TEXT,
+    SubjectArea TEXT,
+    Duration TEXT,
+    FeePerYear REAL,
+    FoundationFee REAL,
+    InternationalFeePerYear REAL,
+    Description TEXT,
+    UcasPoints INTEGER
+);</sql><sql name="SQL 2">INSERT INTO Courses
+(UniversityID, CourseName, StudyLevel, SubjectArea, Duration, FeePerYear, FoundationFee, InternationalFeePerYear, Description, UcasPoints)
+VALUES
+(2,'BA (Honours) Accounting and Finance with Foundation Year','Undergraduate','Accounting, banking and finance','4/5 Years','£9,790','£5,760','£18,000','Become a financial thinker fit for the future – with a forward-looking accounting, banking and finance education developed with industry leaders and professional bodies to help you to shine tomorrow.',64),
+
+(2,'BA (Honours) Acting and Performance with Foundation Year','Undergraduate','Acting, film and TV','4/5 Years','£9,790','£5,760','£18,000','Create your own performances for stage, screen and audio media — with an initial foundation year to prepare for the course.',48),
+
+(2,'BA (Honours) Animation with Foundation Year','Undergraduate','Art and design','4/5 Years','£9,790','£9,790','£18,000','Create meaning through movement in ways only animation can, learning to navigate your personal, creative and professional journey one frame at a time.',80),
+
+(2,'BA (Honours) Business Economics with Foundation Year','Undergraduate','Economics','4/5 Years','£9,790','£5,760','£18,000','Gain the practical skills to apply economic theory to the real world of business, an exciting and challenging fusion of analytical economics and hands-on business insights.',64),
+
+(2,'BA (Honours) Business Management and Enterprise with Foundation Year','Undergraduate','Business and management','4/5 Years','£9,790','£5,760','£18,000','Become an entrepreneur with innovative business ideas – or a successful manager with the skills to create effective business solutions in global organisations, with an initial foundation year to prepare for the course.',64),
+
+(2,'BA (Honours) Business Management and Finance with Foundation Year','Undergraduate','Business and management','4/5 Years','£9,790','£5,760','£18,000','Discover your direction and get there faster. Choose the flexible, adaptable business management and finance degree – from a business school in the top 6% worldwide (AACSB).',64),
+
+(2,'BA (Honours) Business Management and Hospitality with Foundation Year','Undergraduate','Tourism and hospitality','4/5 Years','£9,790','£5,760','£18,000','Develop innovative business strategies, practical experience and leadership skills to excel in the global hospitality industry.',64),
+
+(2,'BA (Honours) Business Management and Marketing with Foundation Year','Undergraduate','Business and management','4/5 Years','£9,790','£5,760','£18,000','Master the future-facing techniques of business management and marketing – discovering what makes iconic brands successful while gaining real-world experience with innovative organisations, with an initial foundation year to prepare for the course.',64),
+
+(2,'BA (Honours) Business Management and Tourism with Foundation Year','Undergraduate','Tourism and hospitality','4/5 Years','£9,790','£5,760','£18,000','Explore global tourism trends while creating real-world business solutions - developing your leadership skills and knowledge to help you start a successful career in tourism.',64),
+
+(2,'BA (Honours) Business Management with Foundation Year','Undergraduate','Business and management','4/5 Years','£9,790','£5,760','£18,000','Master the fundamentals of business management, commercial acumen and leadership before specialising in your chosen discipline and gaining hands-on industry experience, with an initial foundation year to prepare for the course.',64),
+
+(2,'BA (Honours) Business Management with Law with Foundation Year','Undergraduate','Business and management','4/5 Years','£9,790','£5,760','£18,000','Combine business management with law and prepare to manage governance and policy for global organisations – helping them to navigate a broad range of future-facing challenges, with an initial foundation year to prepare for the course.',64),
+
+(2,'BA (Honours) Business Management with Psychology with Foundation Year','Undergraduate','Business and management','4/5 Years','£9,790','£5,760','£18,000','Combine business management with psychology to prepare you to lead teams and manage global organisations – championing inclusivity and customer, with an initial foundation year to prepare for the course.',64),
+
+(2,'BA (Honours) Children and Childhoods with Foundation Year','Undergraduate','Teaching, education and childhood studies','4/5 Years','£9,790','£5,760','£18,000','Develop your knowledge, skills and confidence to work with children, young people and families, engaging with diverse communities, challenging inequality and transforming people''s lives.',64),
+
+(2,'BA (Honours) Digital Media Production with Foundation Year','Undergraduate','Digital media','4/5 Years','£9,790','£9,790','£18,000','Gain a degree in digital media production, with an initial foundation year to prepare for the course.',80);</sql><current_tab id="1"/></tab_sql></sqlb_project>
