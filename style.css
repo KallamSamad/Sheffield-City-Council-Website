@@ -209,3 +209,8 @@ button {
   width: 500px;
   height: 50px;
 }
+
+.grid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
