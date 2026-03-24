@@ -12,7 +12,9 @@
     <title>Gallery</title>
 </head>
 <?php require_once "nav.php"?>
-<div class="grid">
+ 
+<body>
+    <div class="grid">
     <div>1</div>
     <div>2</div>
     <div>3</div>
@@ -20,7 +22,8 @@
     <div>5</div>
     <div>6</div>
 </div>
-<body>
-    
+ <?php require_once "footer.php" ?>
+
 </body>
+ 
 </html>
