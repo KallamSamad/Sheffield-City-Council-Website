@@ -14,16 +14,19 @@
 <?php require_once "nav.php"?>
  
 <body>
+<div class="sandwich"> 
     <div class="grid">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
+    <div class="album"><button class="albumbtn"><image src="Assets/Images/photo-album/student/SHU/sign.webp" height="200px">Student Album</button></div>
+    <div class="album"><button class="albumbtn"><image src="Assets/Images/photo-album/nature/peacegarden.webp" height="200px">Nature Album</button></div>
+    <div class="album"><button class="albumbtn"><image src="Assets/Images/photo-album/city/parkhill.webp" height="200px">City Album</button></div>
+    <div class="album"><button class="albumbtn"><image src="Assets/Images/photo-album/video/video.png" height="200px" width="300px">Video Album</button></div>
+ 
+</div>
 </div>
  <?php require_once "footer.php" ?>
-
+<script>
+    const 
+</script>
 </body>
  
 </html>
