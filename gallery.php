@@ -15,6 +15,7 @@
  
 <body>
 <div class="sandwich"> 
+     <a class="back" href="gallery.php">Back</a>
     <div class="grid">
     <div class="album1"><button class="albumbtn"><img class="imground" src="Assets/Images/photo-album/student/SHU/sign.webp" height="200px">Student Album</button></div>
     <div class="album2"><button class="albumbtn"><img class="imground"  src="Assets/Images/photo-album/nature/peacegarden.webp" height="200px">Nature Album</button></div>
@@ -70,10 +71,11 @@
 <script>
     
     const grid =document.querySelector(".grid");
+    
     const student=document.querySelector(".studentalbum");
     const city=document.querySelector(".cityalbum");
     const nature=document.querySelector(".naturealbum");
-    const video=document.querySelector("videoalbum");
+    const video=document.querySelector(".videoalbum");
 
     const album1=document.querySelector(".album1");
     const album2=document.querySelector(".album2");
@@ -82,24 +84,16 @@
 
     let albumlist=[album1,album2,album3,album4];
 
-    grid.addEventListener("click",function (){
+    let typelist=[student,city,nature,video];
+
+
+    for(let x=0;x<4;x++){
+
+    albumlist[x].addEventListener("click",function (){
     grid.style.display="none";
+    typelist[x].style.display="block";
 
-    if(albumlist[0]){
-        student.style.display="block";
-    }
-    else if(albumlist[1]){
-        city.style.display="block";
-    }
-    else if(albumlist[2]){
-        nature.style.display="block";
-    }
-    else if(albumlist[3]){
-        video.style.display="block";
-    }
-
-    })
-
+    })}
 
  
 
