@@ -61,10 +61,8 @@
         <video class="studentimg" controls><source src="Assets/Images/video/1.mp4" type="video/mp4"></source></video>
         <video class="studentimg" controls><source src="Assets/Images/video/2.mp4" type="video/mp4" ></source></video>
         <video class="studentimg" controls><source src="Assets/Images/video/3.mp4" type="video/mp4"></source></video>
-        <video class="studentimg" controls><source src="Assets/Images/video/4.mp4" type="video/mp4"></source></video>
-        <video class="studentimg" controls><source src="Assets/Images/video/5.mp4" type="video/mp4"></source></video>
-        <video class="studentimg" controls> <source src="Assets/Images/video/6.mp4" type="video/mp4"></source></video>
-        <video class="studentimg "controls><source src="Assets/Images/video/7.mp4" type="video/mp4"></source></video>
+
+          
     </div>
     </div>
  <?php require_once "footer.php" ?>

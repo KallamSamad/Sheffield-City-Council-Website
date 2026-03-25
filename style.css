@@ -270,6 +270,7 @@ body{
 .studentimg,.cityimg{
   height: 200px;
   border-radius: 20px;
+  gap: 20px;
 }
 
 .cityalbum{
@@ -289,4 +290,9 @@ body{
 
 .studentalbum, .naturealbum, .cityalbum, .videoalbum{
   padding: 100px;
+}
+
+.back{
+  padding: 20px;
+  font-size: x-large;
 }
