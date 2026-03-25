@@ -70,14 +70,33 @@
 <script>
     
     const grid =document.querySelector(".grid");
-    
+    const student=document.querySelector(".studentalbum");
+    const city=document.querySelector(".cityalbum");
+    const nature=document.querySelector(".naturealbum");
+    const video=document.querySelector("videoalbum");
 
+    const album1=document.querySelector(".album1");
+    const album2=document.querySelector(".album2");
+    const album3=document.querySelector(".album3");
+    const album4=document.querySelector(".album4");
 
+    let albumlist=[album1,album2,album3,album4];
+
+    for(let x=0;x<5;x++){
     grid.addEventListener("click",function (){
     grid.style.display="none";
+
+    if(x==0){
+        student.style.display="block";
+    }
     
 
     })
+        
+    }
+
+
+ 
 
 
 </script>
