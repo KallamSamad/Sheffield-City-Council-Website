@@ -247,7 +247,7 @@ body{
  
 }
 
-.album{
+.album4{
   position: relative;
 }
 .playcont{
@@ -258,4 +258,14 @@ body{
 
  .play {
   fill: maroon;
+}
+
+.studentalbum{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto ;
+
+}
+
+.studentimg{
+  height: 200px;
 }
