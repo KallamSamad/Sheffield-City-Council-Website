@@ -13,6 +13,7 @@
     <title>Study in Sheffield</title>
 </head>
 <?php require_once "nav.php"?>
+<div class="page"> 
 <body>
  <h3 style="text-align: center;">Explore Sheffield</h3>
 
