@@ -33,10 +33,10 @@
 
 <!--university info -->
 <ul class="EduInfo">
-  <li>.95%–96% of graduates in work or further study 15 months
+  <li>95%–96% of graduates in work or further study 15 months
  after finishing their studies.</li>
-  <li>.Awarded Gold in the 2023 Teaching Excellence Framework (TEF).</li>
-  <li>.Largest supplier of graduates to the public sector
+  <li>Awarded Gold in the 2023 Teaching Excellence Framework (TEF).</li>
+  <li>Largest supplier of graduates to the public sector
  in the UK, Graduate Outcomes Survey (2022/23) 
 Top 50 for graduate prospects, Complete University Guide (2022)</li>
 <li>Apprenticeship award, Educate North Awards (2024) </li>
