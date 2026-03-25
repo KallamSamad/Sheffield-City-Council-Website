@@ -303,7 +303,7 @@ body{
   padding-bottom: 25px;
 
 }
-eduComponents { 
+.eduComponents { 
   display: flex; /*flexbox*/
   align-items: center; /* Center items vertically */
   gap: 30px; /*30px gap between each component of container*/
