@@ -63,7 +63,7 @@ if (!empty($CourseSearch)) {   //if statement for when users enter data ( not em
     echo '<tr><th>Course Name</th></tr>'; //print table row with name 'course name'
 
     // prepare sql query
-    $stmt = $db->prepare('SELECT * FROM Courses WHERE CourseName LIKE :term');  // prepapre sql execution to select all courses with matching course name
+    $stmt = $db->prepare('SELECT * FROM Course WHERE CourseName LIKE :term');  // prepapre sql execution to select all courses with matching course name
     $stmt->bindValue(':term', '%' . $CourseSearch . '%', SQLITE3_TEXT); // improves useability, no need to search for full course name 
     $courses = $stmt->execute(); // execute sql
 
