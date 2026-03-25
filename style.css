@@ -215,7 +215,7 @@ button {
   display: grid;
   grid-template-columns: auto auto ;
   gap:10px;
-  padding-left: 190px;
+  padding-left: 450px;
 }
 
 .albumbtn{
@@ -295,4 +295,11 @@ body{
 .back{
   padding: 20px;
   font-size: x-large;
+}
+.topheavy{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 25px;
+
 }

@@ -16,10 +16,14 @@
 <body>
 <div class="sandwich"> 
      <a class="back" href="gallery.php">Back</a>
+    <div class="topheavy"> 
+     
+     <h1>Gallery of Sheffield</h1>
+     </div>
     <div class="grid">
     <div class="album1"><button class="albumbtn"><img class="imground" src="Assets/Images/photo-album/student/SHU/sign.webp" height="200px">Student Album</button></div>
-    <div class="album2"><button class="albumbtn"><img class="imground"  src="Assets/Images/photo-album/nature/peacegarden.webp" height="200px">Nature Album</button></div>
-    <div class="album3"><button class="albumbtn"><img class="imground"  src="Assets/Images/photo-album/city/parkhill.webp" height="200px">City Album</button></div>
+    <div class="album2"><button class="albumbtn"><img class="imground"  src="Assets/Images/photo-album/city/parkhill.webp" height="200px">City Album</button></div>
+    <div class="album3"><button class="albumbtn"><img class="imground"  src= "Assets/Images/photo-album/nature/peacegarden.webp" height="200px">Natture Album</button></div>
     <div class="album4"><button class="albumbtn"><div class="playcont"> <img class="play" src="Assets/Images/play.svg"><img class="imground" src="Assets/Images/photo-album/video/video.png" style="fill: maroon;" height="200px" width="300px"></div>Video Album</button></div>
     </div>
 
