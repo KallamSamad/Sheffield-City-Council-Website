@@ -33,6 +33,8 @@ let geocoder;
 let marker;
 function initMap() {
   const sheffield = { lat: 53.3811, lng: -1.4701 };
+  const SHU = { lat: 53.3791, lng: -1.4647 };
+  const UOS = {lat: 53.3806, lng: -1.4876};
    geocoder=new google.maps.Geocoder();
    map = new google.maps.Map(document.getElementById("map"), {
     center: sheffield,
@@ -43,6 +45,18 @@ function initMap() {
     position: sheffield,
     map: map,
     title: "Sheffield"
+  });
+
+  marker=new google.maps.Marker({
+    position: SHU,
+    map: map,
+    title: "Sheffield Hallam University"
+  });
+
+  marker=new google.maps.Marker({
+    position: UOS,
+    map: map,
+    title: "University Of Sheffield"
   });
 }
 </script>
