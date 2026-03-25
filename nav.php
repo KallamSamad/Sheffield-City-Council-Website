@@ -18,7 +18,7 @@
 </li>
 
 <li class="nav-item">
-<a class="nav-link text-white" href="#"><img  class="icon"src= "Assets/Images/education.svg" height="60px" width="60px">Education</a>
+<a class="nav-link text-white" href="HallamUniPage.php"><img  class="icon"src= "Assets/Images/education.svg" height="60px" width="60px">Education</a>
 </li>
 
  
