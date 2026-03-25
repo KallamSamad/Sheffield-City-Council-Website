@@ -243,6 +243,7 @@ body{
   height: 100px;
   border: solid 3px white;
   border-radius: 100px;
+  
  
  
 }
@@ -266,6 +267,26 @@ body{
 
 }
 
-.studentimg{
+.studentimg,.cityimg{
   height: 200px;
+  border-radius: 20px;
+}
+
+.cityalbum{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.imground{
+  border-radius: 10px;
+}
+
+.naturealbum{
+  display: grid;
+  grid-template-rows: auto;
+
+}
+
+.studentalbum, .naturealbum, .cityalbum, .videoalbum{
+  padding: 100px;
 }
