@@ -85,5 +85,6 @@ if (!empty($CourseSearch)) {   //if statement for when users enter data ( not em
 
 <?php include 'footer.php'; ?> <!-- reference footer-->
 
+<!--nnn-->
 </body>
 </html>
