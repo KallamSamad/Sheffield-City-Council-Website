@@ -348,3 +348,77 @@ eduComponents {
 
   font-weight: bold;
 }
+
+.contact-page {
+  padding: 40px 20px;
+}
+
+.contact-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: maroon;
+}
+
+/* Layout */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Contact Info Box */
+.contact-info {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-weight: 500;
+}
+
+/* Form Box */
+.contact-form {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Form fields */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* Focus effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: maroon;
+  outline: none;
+  box-shadow: 0 0 5px rgba(128, 0, 0, 0.3);
+}
+
+/* Button */
+.contact-btn {
+  width: 100%;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #800000cc;
+}
