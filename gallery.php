@@ -19,7 +19,7 @@
     <div class="album"><button class="albumbtn"><image src="Assets/Images/photo-album/student/SHU/sign.webp" height="200px">Student Album</button></div>
     <div class="album"><button class="albumbtn"><image src="Assets/Images/photo-album/nature/peacegarden.webp" height="200px">Nature Album</button></div>
     <div class="album"><button class="albumbtn"><image src="Assets/Images/photo-album/city/parkhill.webp" height="200px">City Album</button></div>
-    <div class="album"><button class="albumbtn"><image src="Assets/Images/photo-album/video/video.png" height="200px" width="300px">Video Album</button></div>
+    <div class="album"><button class="albumbtn"><div class="playcont"> <image class="play" src="Assets/Images/play.svg" style="color:white"><image src="Assets/Images/photo-album/video/video.png" height="200px" width="300px"></div>Video Album</button></div>
  
 </div>
 </div>
