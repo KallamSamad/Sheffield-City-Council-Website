@@ -82,18 +82,23 @@
 
     let albumlist=[album1,album2,album3,album4];
 
-    for(let x=0;x<5;x++){
     grid.addEventListener("click",function (){
     grid.style.display="none";
 
-    if(x==0){
+    if(albumlist[0]){
         student.style.display="block";
     }
-    
+    else if(albumlist[1]){
+        city.style.display="block";
+    }
+    else if(albumlist[2]){
+        nature.style.display="block";
+    }
+    else if(albumlist[3]){
+        video.style.display="block";
+    }
 
     })
-        
-    }
 
 
  
