@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
 
     <link rel="stylesheet" href="style.css">
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
 </head>
-
 <body>
-<?php require_once 'nav.php'; ?> 
-<!-- Contact Content -->
-<div class="page">
 
+<?php require_once 'nav.php'; ?>
+
+<div class="page">
     <h1>Contact Us</h1>
 
     <div class="contact-info">
@@ -23,7 +28,6 @@
     <h2>Send us a message</h2>
 
     <form>
-
         <label for="name">Name</label><br>
         <input type="text" id="name" name="name"><br><br>
 
@@ -34,16 +38,11 @@
         <textarea id="message" name="message" rows="5"></textarea><br><br>
 
         <button type="submit">Submit</button>
-
     </form>
-
 </div>
 
-</div> 
-<?php require_once "footer.php"?>
-</div>
- <script>
-let lastScroll = 0;
+<?php require_once "footer.php"; ?>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
