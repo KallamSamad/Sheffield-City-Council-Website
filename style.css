@@ -209,3 +209,215 @@ button {
   width: 500px;
   height: 50px;
 }
+.grid{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto auto ;
+  gap:10px;
+  padding-left: 450px;
+}
+
+.albumbtn{
+  display: flex;
+  background-color: maroon;
+  border-radius: 20px;
+  color: white;
+  flex-direction: column;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.albumbtn:hover{
+  filter: grayscale(100%);
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.play{
+  position: absolute;
+  height: 100px;
+  border: solid 3px white;
+  border-radius: 100px;
+  
+ 
+ 
+}
+
+.album4{
+  position: relative;
+}
+.playcont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ .play {
+  fill: maroon;
+}
+
+.studentalbum{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto ;
+
+}
+
+.studentimg,.cityimg{
+  height: 200px;
+  border-radius: 20px;
+  gap: 20px;
+}
+
+.cityalbum{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.imground{
+  border-radius: 10px;
+}
+
+.naturealbum{
+  display: grid;
+  grid-template-rows: auto;
+
+}
+
+.studentalbum, .naturealbum, .cityalbum, .videoalbum{
+  padding: 100px;
+}
+
+.back{
+  padding: 20px;
+  font-size: x-large;
+}
+.topheavy{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 25px;
+
+}
+.eduComponents { 
+  display: flex; /*flexbox*/
+  align-items: center; /* Center items vertically */
+  gap: 30px; /*30px gap between each component of container*/
+  margin: 40px; /*space around container*/
+}
+
+
+.edu-image {
+  width: 600px;
+}
+
+.EducationArrowButton {
+  font-size: 40px;        
+  padding: 20px; /*size*/         
+  border: none;
+  background: maroon;
+  color: white;
+  border-radius: 60%; /* turns into a circle, nicer looking*/
+}
+
+/* actvate when hovering over button*/
+.EducationArrowButton:hover { 
+  background: #8b0000;
+  transform: scale(1.3);
+} /* makes it more clear your on the button  and makes it look more profesional*/
+
+
+.EduInfo {
+  list-style: disc;/*bullet points, improves readability*/
+  gap: 20px; /*space between bullet points*/;
+  font-size: 18px;
+}
+
+#courseTable td {
+  width: 100%;
+  margin-top: 20px;
+  font-weight: bold;
+  padding: 20px 20px;
+}
+
+#courseTable{
+
+  font-weight: bold;
+}
+
+.contact-page {
+  padding: 40px 20px;
+}
+
+.contact-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: maroon;
+}
+
+/* Layout */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Contact Info Box */
+.contact-info {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-weight: 500;
+}
+
+/* Form Box */
+.contact-form {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Form fields */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* Focus effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: maroon;
+  outline: none;
+  box-shadow: 0 0 5px rgba(128, 0, 0, 0.3);
+}
+
+/* Button */
+.contact-btn {
+  width: 100%;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #800000cc;
+}
