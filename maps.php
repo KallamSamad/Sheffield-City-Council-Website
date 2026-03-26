@@ -39,7 +39,7 @@ function initMap() {
    geocoder=new google.maps.Geocoder();
    map = new google.maps.Map(document.getElementById("map"), {
     center: sheffield,
-    zoom: 12
+    zoom: 15
   });
  
   marker=new google.maps.Marker({
