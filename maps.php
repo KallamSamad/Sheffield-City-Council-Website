@@ -21,7 +21,7 @@
  <div class="map-wrapper">
 <div class="search-wrapper"> 
 <input class="search" type="text" placeholder="Search a location">
-<input class="btn" type="button" value="Search">
+<button class="map-btn">Search</button>
  <div class="error" style="color: red;"></div>
 </div>
 <div id="map"></div>
