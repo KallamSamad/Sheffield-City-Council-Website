@@ -22,7 +22,7 @@
 </li>
 <li class="nav-item">
   <div class="translate-box">
-  🌍 <div id="google_translate_element"></div>
+  <img  class="icon"src= "Assets/Images/translate.svg" height="60px" width="60px"> <div id="google_translate_element"></div>
 </div>
 </li>
 
