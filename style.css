@@ -421,3 +421,30 @@ body{
 .contact-btn:hover {
   background-color: #800000cc;
 }
+
+/* Navbar layout */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Push translate to right */
+.translate-box {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Style dropdown */
+.goog-te-combo {
+  padding: 5px;
+  border-radius: 6px;
+  border: none;
+  font-size: 12px;
+}
+
+/* Optional: hide ugly default text */
+.goog-te-gadget {
+  font-size: 0;
+}

@@ -20,6 +20,11 @@
 <li class="nav-item">
 <a class="nav-link text-white" href="HallamUniPage.php"><img  class="icon"src= "Assets/Images/education.svg" height="60px" width="60px">Education</a>
 </li>
+<li class="nav-item">
+  <div class="translate-box">
+  🌍 <div id="google_translate_element"></div>
+</div>
+</li>
 
  
 
