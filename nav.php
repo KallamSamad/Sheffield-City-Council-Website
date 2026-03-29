@@ -26,7 +26,9 @@
 </div>
 </li>
 
- 
+ <li class="nav-item">
+<a class="nav-link text-white" href="accessibility.php"><img  class="icon"src= "Assets/Images/accessibility.svg" height="60px" width="60px">Accessibility</a>
+</li>
 
       </ul>
     </div>
