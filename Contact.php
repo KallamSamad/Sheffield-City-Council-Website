@@ -7,6 +7,7 @@
     <title>Contact</title>
 
     <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="a11y.css">
     <link 
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
         rel="stylesheet"

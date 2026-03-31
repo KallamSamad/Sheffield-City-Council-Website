@@ -426,6 +426,7 @@ body{
 nav {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 /* Push translate to right */
@@ -447,4 +448,24 @@ nav {
 /* Optional: hide ugly default text */
 .goog-te-gadget {
   font-size: 0;
+}
+
+.a11y-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.translate-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.icon{
+  filter: brightness(0) invert(1);
 }
