@@ -45,25 +45,21 @@
 
     <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;"> 
 
-      <!--button to cycle through food info using JS-->
       <button 
         style="font-size: 40px; padding: 20px; border: none; background: maroon; color: white; border-radius: 60%; cursor: pointer; transition: transform .15s ease, background .15s ease; margin-bottom: 60px;" 
         onclick="cycleFoodInfo2()">
         <i class="fa-solid fa-angle-right"></i>
       </button>
 
-      <!--text above unordered list-->
       <p style="font-size: 24px; font-weight: bold; color: #333; margin-bottom: 20px;">
         Click the arrow to explore food options available at Sheffield University
       </p>
 
-      <!--list appended to by JS function-->
       <ul id="FoodInfoList2" style="list-style: disc; font-size: 22px; font-weight: bold; line-height: 1.6; margin-left: 20px; padding-left: 20px;"></ul>
     </div>
 
   </div>
 
-  <?php include 'footer.php'; ?> <!--footer included at bottom-->
-
+  <?php include 'footer.php'; ?>
 </body>
 </html>
