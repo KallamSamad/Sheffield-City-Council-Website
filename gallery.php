@@ -103,7 +103,7 @@
     })}
     const lightbox = document.createElement('div');
     const img = document.createElement('img');
-    
+
 
     for(let y=0;y<4;y++){
     typelist[y].addEventListener("click", function(){
@@ -120,11 +120,11 @@
     body.insertBefore(lightbox, sandwich)
     lightbox.style.height="100vh";
     lightbox.style.backgroundColor="#000";
-    
-
-    img.src=imgsrc;
-    img.style.display="block";
-    img.className="singimg";
+     if(event.target.classList.contains("studentimg")){
+        img.src=imgsrc;
+        img.style.display="block";
+        img.className="singimg";
+}
 
 
     lightbox.appendChild(img);
