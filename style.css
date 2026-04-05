@@ -484,12 +484,16 @@ nav {
   height: 80vh;
 }
 
- .cross {
-  position: relative;
-  display: flex;
-  height: 50px;
-  gap: 90px;
-  padding-left: 1200px;
-  filter: brightness(0) invert(1);
+.lightbox {
+  position: fixed;
+}
 
+.cross {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
 }
