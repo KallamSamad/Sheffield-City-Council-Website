@@ -136,6 +136,12 @@
     cross.addEventListener("click",function(){
         lightbox.style.display="none";
     })
+    document.addEventListener("keydown",function(x){
+
+    if (x.key==="Escape"){
+        lightbox.style.display="none";
+    }
+    })
      
     
     
