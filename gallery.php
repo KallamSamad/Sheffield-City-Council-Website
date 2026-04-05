@@ -119,6 +119,10 @@
     
     const img = document.createElement('img');
     img.src=imgsrc;
+    img.style.display="block";
+
+    lightbox.appendChild(img);
+    
     
  
      
