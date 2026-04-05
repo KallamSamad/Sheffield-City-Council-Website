@@ -71,6 +71,7 @@
     </div>
  <?php require_once "footer.php" ?>
 <script>
+    const body = document.body;
     
     const grid =document.querySelector(".grid");
     
@@ -83,6 +84,11 @@
     const album2=document.querySelector(".album2");
     const album3=document.querySelector(".album3");
     const album4=document.querySelector(".album4");
+
+    const child1=student.children;
+    const child2=city.children;
+    const child3=nature.children;
+    const child4=video.children;
 
     let albumlist=[album1,album2,album3,album4];
 
@@ -100,6 +106,9 @@
     for(let y=0;y<4;y++){
     typelist[y].addEventListener("click", function(){
     console.log("hello");
+    console.log(event.target.className);
+    img[y].style.display="flex"
+    body.style.backgroundColor="#0000";
 
     })}
 
