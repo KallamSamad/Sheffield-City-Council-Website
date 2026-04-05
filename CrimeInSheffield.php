@@ -17,7 +17,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script src="Crime.js" defer></script>  <!--external js file for functions-->
+  <script src="IbbyFunctions.js" defer></script>  <!--external js file for functions-->
 </head>
 
 <body>
