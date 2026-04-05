@@ -111,15 +111,18 @@
     const imgsrc=event.target.src;
 
     const lightbox = document.createElement('div');
-        lightbox.style.display="block";
+    lightbox.style.display="flex";
+    lightbox.className = "lightbox";
 
     body.insertBefore(lightbox, sandwich)
-    lightbox.style.height="1000px";
+    lightbox.style.height="100vh";
     lightbox.style.backgroundColor="#000";
     
     const img = document.createElement('img');
     img.src=imgsrc;
     img.style.display="block";
+    img.className="singimg";
+
 
     lightbox.appendChild(img);
     
