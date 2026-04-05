@@ -97,6 +97,12 @@
 
     })}
 
+    for(let y=0;y<4;y++){
+    typelist[y].addEventListener("click", function(){
+    console.log("hello");
+
+    })}
+
  
 
 
