@@ -132,6 +132,10 @@
 
     lightbox.appendChild(cross);
     lightbox.appendChild(img);
+
+    cross.addEventListener("click",function(){
+        lightbox.style.display="none";
+    })
      
     
     
