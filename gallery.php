@@ -108,6 +108,7 @@
 
     for(let y=0;y<4;y++){
     typelist[y].addEventListener("click", function(){
+    document.querySelector("nav").style.display="none";
     
     console.log("hello");
     console.log(event.target.className);
