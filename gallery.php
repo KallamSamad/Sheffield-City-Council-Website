@@ -40,13 +40,13 @@
 
 
     <div class="cityalbum" style="display:none">
-    <img class="cityimg" src="Assets/Images/photo-album/city/center.webp">
-    <img class="cityimg" src="Assets/Images/photo-album/city/lightup.webp">
-    <img class="cityimg" src="Assets/Images/photo-album/city/lightup2.webp">
-    <img class="cityimg" src="Assets/Images/photo-album/city/parkhill.webp">
-    <img class="cityimg" src="Assets/Images/arial.jpg">
-    <img class="cityimg" src="Assets/Images/sheffield.jpg">
-    <img class="cityimg" src="Assets/Images/xmasmark1.jpg">
+    <img class="studentimg" src="Assets/Images/photo-album/city/center.webp">
+    <img class="studentimg" src="Assets/Images/photo-album/city/lightup.webp">
+    <img class="studentimg" src="Assets/Images/photo-album/city/lightup2.webp">
+    <img class="studentimg" src="Assets/Images/photo-album/city/parkhill.webp">
+    <img class="studentimg" src="Assets/Images/arial.jpg">
+    <img class="studentimg" src="Assets/Images/sheffield.jpg">
+    <img class="studentimg" src="Assets/Images/xmasmark1.jpg">
     </div>
 
 
@@ -72,6 +72,8 @@
  <?php require_once "footer.php" ?>
 <script>
     const body = document.body;
+
+    const sandwich=document.querySelector(".sandwich")
     
     const grid =document.querySelector(".grid");
     
@@ -85,10 +87,7 @@
     const album3=document.querySelector(".album3");
     const album4=document.querySelector(".album4");
 
-    const child1=student.children;
-    const child2=city.children;
-    const child3=nature.children;
-    const child4=video.children;
+     
 
     let albumlist=[album1,album2,album3,album4];
 
@@ -105,10 +104,24 @@
 
     for(let y=0;y<4;y++){
     typelist[y].addEventListener("click", function(){
+    
     console.log("hello");
     console.log(event.target.className);
-    img[y].style.display="flex"
-    body.style.backgroundColor="#0000";
+
+    const imgsrc=event.target.src;
+
+    const lightbox = document.createElement('div');
+        lightbox.style.display="block";
+
+    body.insertBefore(lightbox, sandwich)
+    lightbox.style.height="1000px";
+    lightbox.style.backgroundColor="#000";
+    
+    const img = document.createElement('img');
+    img.src=imgsrc;
+    
+ 
+     
 
     })}
 
