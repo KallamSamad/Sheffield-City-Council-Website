@@ -103,6 +103,7 @@
     })}
     const lightbox = document.createElement('div');
     const img = document.createElement('img');
+    const cross=document.createElement('img');
 
 
     for(let y=0;y<4;y++){
@@ -112,13 +113,16 @@
     console.log(event.target.className);
     const imgsrc=event.target.src;
 
+    cross.src="Assets/Images/cross.svg"
+    cross.style.display="flex";
+    cross.className="cross"
 
-
-    
     lightbox.style.display="flex";
     lightbox.className = "lightbox";
     body.insertBefore(lightbox, sandwich)
     lightbox.style.height="100vh";
+
+
     lightbox.style.backgroundColor="#000";
      if(event.target.classList.contains("studentimg")){
         img.src=imgsrc;
@@ -126,8 +130,9 @@
         img.className="singimg";
 }
 
-
+    lightbox.appendChild(cross);
     lightbox.appendChild(img);
+     
     
     
  

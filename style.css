@@ -475,10 +475,21 @@ nav {
 .lightbox{
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
 }
 
 .singimg{
-  height: 100vh;
+  height: 80vh;
+}
+
+ .cross {
+  position: relative;
+  display: flex;
+  height: 50px;
+  gap: 90px;
+  padding-left: 1200px;
+  filter: brightness(0) invert(1);
+
 }
