@@ -21,7 +21,8 @@
 <body>
 
 <?php include 'nav.php'; ?> <!-- reference nav.php file -->
-
+<div class="page"> 
+<div class="sandwich"> 
 <h1 class="page-title">Hallam University- TOP 800 GLOBALLY</h1>
 
 <div class="eduComponents"> <!-- set componenets all in one container so its easier to style with css -->
@@ -84,8 +85,10 @@ if (!empty($CourseSearch)) {   //if statement for when users enter data ( not em
     echo '</table>'; // close table -->
 }
 ?>
-
-<?php include 'footer.php'; ?> <!-- reference footer-->
+</div>
+</div>
+</div>
+ <?php include 'footer.php'; ?> <!-- reference footer-->
 
 </body>
 </html>

@@ -18,7 +18,8 @@
 <body>
 
 <?php require_once 'nav.php'; ?>
-
+<div class="page"> 
+<div class="sandwich"> 
 <div class="page contact-page">
     <h1 class="contact-title">Contact Us</h1>
 
@@ -52,7 +53,8 @@
         <button type="submit">Submit</button>
     </form>
 </div>
-
+</div>
+</div>
 <?php require_once "footer.php"; ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
