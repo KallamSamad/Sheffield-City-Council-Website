@@ -24,7 +24,7 @@
 <div class="sandwich"> 
 
 <?php include 'nav.php'; ?> <!-- reference nav.php file -->
-
+<?php include 'EduNav.php'; ?> <!-- reference EduNav.php file -->
 <h1 class="page-title">University Of Sheffield- TOP 100 GLOBALLY</h1> <!-- Title -->
 
 <div class="eduComponents"> <!-- set componenets all in one container so its easier to style with css -->
