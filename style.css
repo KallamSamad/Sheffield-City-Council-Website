@@ -356,7 +356,7 @@ eduComponents {
     rgba (0, 0, 0, 0.5)
     rgba (0, 0, 0, 0.5)
     ),
-    url('your-image.jpg'); 
+    url(image/sheffield.avif); 
 
   background-size: cover;
   background-position: center;
