@@ -30,6 +30,13 @@
           </a>
         </li>
 
+        <li class="nav-item">    
+            <a class="nav-link text-white" href="CrimeInSheffield.php"></a>
+            <img class="icon" src="Assets/Images/speech.svg" height="60" width="60" alt="">
+            Testimonies
+          </a>
+        </li>
+
        
 
 <li class="nav-item">
