@@ -23,6 +23,8 @@
 <body>
 
   <?php include 'nav.php'; ?> <!--nav bar on top of page-->
+  <?php include 'EduNav.php'; ?>
+
 
   <h1 style="font-size: 42px; font-weight: bold; color: #000; margin-top: 40px; text-align: left;">
     There's Food For Everyone In Hallam
