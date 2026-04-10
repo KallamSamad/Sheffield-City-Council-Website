@@ -1,96 +1,138 @@
 <html>
 <head>
-  <title>Education</title> <!-- title-->
-  
+  <title>Education</title>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css"> 
-  
-  <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-    rel="stylesheet" 
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
-    crossorigin="anonymous">
-        
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="a11y.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
 
-<?php include 'nav.php'; ?> <!-- reference nav.php file -->
+<?php include 'nav.php'; ?>
+<?php include 'EduNav.php'; ?>
 
-<h1 class="page-title">University Of Sheffield- TOP 100 GLOBALLY</h1> <!-- Title -->
+<div class="page">
+  <h1 class="page-title">University Of Sheffield - TOP 100 GLOBALLY</h1>
 
-<div class="eduComponents"> <!-- set componenets all in one container so its easier to style with css -->
+  <div class="eduComponents">
+    <img src="Assets/Images/latin.webp" width="600" alt="University of Sheffield Campus">
 
-<!--image-->
-<img src="https://www.sheffield.ac.uk/polopoly_fs/1.105920!/file/University-of-Sheffield-Campus.jpg" width="600" alt="University of Sheffield Campus">
+    <button class="EducationArrowButton" onclick="window.location.href='HallamUniPage.php'">
+      <i class="fa-solid fa-angle-right"></i>
+    </button>
 
-<!--navigation button to switch between hallam and sheffield university-->
-<button class="EducationArrowButton" onclick="window.location.href='HallamUniPage.php'">
-  <i class="fa-solid fa-angle-right"></i> <!-- symbol used for navigation button from font awesome website-->
-</button>
+    <ul class="EduInfo">
+      <li style="font-size:25px; font-weight:bold; margin-bottom:20px;">
+        Over 85% of graduates are in graduate-level employment or further study
+      </li>
+      <li style="font-size:25px; font-weight:bold; margin-bottom:20px;">
+        Our staff and students achieve great things. Six members of our staff have been awarded a prestigious Nobel Prize.
+      </li>
+      <li style="font-size:25px; font-weight:bold;">
+        Voted top in the Russell Group for student experience for three consecutive years
+      </li>
+    </ul>
+  </div>
 
-<!--Info about University-->
-<ul class="EduInfo">
-  <li>Over 85% of graduates are in graduate-level employment or further study</li>
-  <li>Our staff and students achieve great things. Six members of our staff have been awarded a prestigious Nobel Prize.</li>
-  <li>Voted top in the Russell Group for student experience for three consecutive years</li>
-</ul>
-<div>
+  <h2 class="CourseSearch">Search Courses</h2>
 
+  <form method="GET" class="SearchBar">
+    <input
+      type="text"
+      name="CourseSearch"
+      placeholder="Search for a course"
+      value="<?php echo isset($_GET['CourseSearch']) ? htmlspecialchars($_GET['CourseSearch']) : ''; ?>"
+    >
+    <button type="submit">Search</button>
+  </form>
 
+  <?php
+  $db = new SQLite3('SoftwareProjectDB.DB');
 
-<h2 class="CourseSearch">Search Courses</h2> <!--class makes styling easier-->
+  $CourseSearch = isset($_GET['CourseSearch']) ? $_GET['CourseSearch'] : '';
+  $selectedCourseID = isset($_GET['CourseID']) ? $_GET['CourseID'] : null;
 
-<form method="GET" class="SearchBar"> <!-- get method to query for data, send searched data into url-->
-  <!-- only takes text input, sends data via url as 'CourseSearch' -->
-  <input type="text" name="CourseSearch" placeholder="Search for a course"  
-         value="<?php echo isset($_GET['CourseSearch']) ? htmlspecialchars($_GET['CourseSearch']) : ''; ?>"> <!-- set CourseSearch to nothing if empty -->
-  <button type="submit">Search</button> <!--submits data when button clicked -->
-</form>
+  if (!empty($CourseSearch)) {
+      echo "<div style='display:flex; gap:40px; align-items:flex-start;'>";
+      echo "<div style='flex:1;'>";
 
-<?php
-$db = new SQLite3('SoftwareProjectDB.DB'); // connected to database 
+      echo '<table id="courseTable">';
+      echo "<tr><th style='font-size:25px; font-weight:bold;'>Course Name</th></tr>";
 
-$CourseSearch = isset($_GET['CourseSearch']) ? $_GET['CourseSearch'] : '';
+      $stmt = $db->prepare('SELECT CourseID, CourseName FROM Course WHERE UniversityID = 1 AND CourseName LIKE :term');
+      $stmt->bindValue(':term', '%' . $CourseSearch . '%', SQLITE3_TEXT);
+      $courses = $stmt->execute();
 
-//takes CourseSearch from url to use for database query, sets it to nothing if empty
-if (!empty($CourseSearch)) {   //if statement for when users enter data ( not empty) into search bar
-    echo '<table id="courseTable">'; //print table
-    echo '<tr><th>Course Name</th></tr>'; //print table row with name 'course name'
+      $hasResults = false;
 
-    // prepare sql query
+      while ($row = $courses->fetchArray(SQLITE3_ASSOC)) {
+          $hasResults = true;
+          $highlight = ($selectedCourseID == $row['CourseID']) ? "style='background:#eee'" : "";
 
-    $stmt = $db->prepare('SELECT * FROM Course WHERE CourseName LIKE :term');  // prepapre sql execution to select all courses with matching course name
-    $stmt->bindValue(':term', '%' . $CourseSearch . '%', SQLITE3_TEXT); // improves useability, no need to search for full course name 
-    $courses = $stmt->execute(); // execute sql
+          echo "<tr $highlight>";
+          echo "<td>
+                  <a style='font-size:25px; font-weight:bold;' href='?CourseSearch=" . urlencode($CourseSearch) . "&CourseID=" . $row['CourseID'] . "'>
+                    " . htmlspecialchars($row['CourseName']) . "
+                  </a>
+                </td>";
+          echo "</tr>";
+      }
 
-    $hasResults = false; //set false if no results found , used in if statment below to print message
-    while ($row = $courses->fetchArray(SQLITE3_ASSOC)) {    // while loop to print through sql results as long as rows left from sql query
-        $hasResults = true; // if results found, $hasResults is true
-        echo "<tr>";// print table row+
-        echo "<td>" . htmlspecialchars($row['CourseName']) . "</td>"; // print course names,  preventing XSS (Cross-site Scripting) attacks by ensuring that any special characters in user input are not interpreted as HTML by the browser.
-        echo "</tr>";// close table
-    }
+      if (!$hasResults) {
+          echo "<tr><td>No courses found.</td></tr>";
+      }
 
-    if (!$hasResults) {  // if no results found, print message 'no courses found' 
-          echo "<tr><td>No courses found.</td></tr>";  // print message if if statement true
-    }
+      echo '</table>';
+      echo "</div>";
 
-    echo '</table>'; // close table -->
-}
-?>
+      echo "<div style='flex:1; margin-top:40px;'>";
 
+      if ($selectedCourseID) {
+          $stmt = $db->prepare('SELECT CourseName FROM Course WHERE CourseID = :id');
+          $stmt->bindValue(':id', $selectedCourseID, SQLITE3_INTEGER);
+          $course = $stmt->execute()->fetchArray(SQLITE3_ASSOC);
 
+          if ($course) {
+              echo "<h3>Testimonials for " . htmlspecialchars($course['CourseName']) . "</h3>";
+          }
 
+          $stmt = $db->prepare('
+              SELECT DisplayName, Country, Content
+              FROM Testimonial
+              WHERE CourseID = :id
+          ');
+          $stmt->bindValue(':id', $selectedCourseID, SQLITE3_INTEGER);
+          $results = $stmt->execute();
+
+          $hasResults = false;
+
+          while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
+              $hasResults = true;
+              echo "<div style='border:1px solid #ccc; padding:15px; margin-bottom:15px; border-radius:10px; font-size:22px; font-weight:bold;'>";
+              echo "<strong>" . htmlspecialchars($row['DisplayName']) . "</strong> (" . htmlspecialchars($row['Country']) . ")";
+              echo "<p style='font-weight:bold;'>" . htmlspecialchars($row['Content']) . "</p>";
+              echo "</div>";
+          }
+
+          if (!$hasResults) {
+              echo "<p>No testimonies found.</p>";
+          }
+      } else {
+          echo "<p style='font-size:20px;'>Select a course to view its testimonies.</p>";
+      }
+
+      echo "</div>";
+      echo "</div>";
+  }
+  ?>
 </div>
-</div>
- 
-</div>
- 
 
-<?php include 'footer.php'; ?> <!-- reference footer-->
+<?php include 'footer.php'; ?>
 
 </body>
 </html>
