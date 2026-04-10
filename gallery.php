@@ -1,164 +1,216 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="a11y.css">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-        rel="stylesheet" 
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
-        crossorigin="anonymous">
-    <title>Gallery</title>
-</head>
-<?php require_once "nav.php"?>
- 
-<body>
-<div class="sandwich"> 
-     <a class="back" href="gallery.php">Back</a>
-    <div class="topheavy"> 
-     
-     <h1>Gallery of Sheffield</h1>
-     </div>
-    <div class="grid">
-    <div class="album1"><button class="albumbtn"><img class="imground" src="Assets/Images/photo-album/student/SHU/sign.webp" height="200px">Student Album</button></div>
-    <div class="album2"><button class="albumbtn"><img class="imground"  src="Assets/Images/photo-album/city/parkhill.webp" height="200px">City Album</button></div>
-    <div class="album3"><button class="albumbtn"><img class="imground"  src= "Assets/Images/photo-album/nature/peacegarden.webp" height="200px">Natture Album</button></div>
-    <div class="album4"><button class="albumbtn"><div class="playcont"> <img class="play" src="Assets/Images/play.svg"><img class="imground" src="Assets/Images/photo-album/video/video.png" style="fill: maroon;" height="200px" width="300px"></div>Video Album</button></div>
-    </div>
-
-    <div class="studentalbum" style="display:none">
-    <img class="studentimg" src="Assets/Images/photo-album/student/SHU/sign.webp">
-    <img class="studentimg" src="Assets/Images/photo-album/student/SHU/owen.webp">
-    <img class="studentimg" src="Assets/Images/photo-album/student/SHU/owen2.webp">
-    <img class="studentimg" src="Assets/Images/photo-album/student/SHU/poem.webp">
-    <img class="studentimg" src="Assets/Images/photo-album/student/UoS/campus.webp">
-    <img class="studentimg" src="Assets/Images/photo-album/student/UoS/latin.webp">
-    <img class="studentimg" src="Assets/Images/photo-album/student/UoS/sign.webp">
-    <img class="studentimg" src="Assets/Images/photo-album/student/UoS/uosbuild.webp">
-    </div>
-
-
-    <div class="cityalbum" style="display:none">
-    <img class="studentimg" src="Assets/Images/photo-album/city/center.webp">
-    <img class="studentimg" src="Assets/Images/photo-album/city/lightup.webp">
-    <img class="studentimg" src="Assets/Images/photo-album/city/lightup2.webp">
-    <img class="studentimg" src="Assets/Images/photo-album/city/parkhill.webp">
-    <img class="studentimg" src="Assets/Images/arial.jpg">
-    <img class="studentimg" src="Assets/Images/sheffield.jpg">
-    <img class="studentimg" src="Assets/Images/xmasmark1.jpg">
-    </div>
-
-
-
-        <div class="naturealbum" style="display:none">
-    <img class="studentimg" src="Assets/Images/photo-album/nature/norfolkheritage.webp">
-    <img class="studentimg" src="Assets/Images/photo-album/nature/peacegarden.webp">
-    <img class="studentimg" src="Assets/Images/photo-album/nature/rivelin.webp">
-    <img class="studentimg" src="Assets/Images/photo-album/nature/sheffpark.webp">
-    <img class="studentimg" src="Assets/Images/peakdistrict.jpg">
-
-    </div>
-
-
-        <div class="videoalbum" style="display:none">
-        <video class="studentimg" controls><source src="Assets/Images/video/1.mp4" type="video/mp4"></source></video>
-        <video class="studentimg" controls><source src="Assets/Images/video/2.mp4" type="video/mp4" ></source></video>
-        <video class="studentimg" controls><source src="Assets/Images/video/3.mp4" type="video/mp4"></source></video>
-
-          
-    </div>
-    </div>
- <?php require_once "footer.php" ?>
-<script>
-    const body = document.body;
-
-    const sandwich=document.querySelector(".sandwich")
-    
-    const grid =document.querySelector(".grid");
-    
-    const student=document.querySelector(".studentalbum");
-    const city=document.querySelector(".cityalbum");
-    const nature=document.querySelector(".naturealbum");
-    const video=document.querySelector(".videoalbum");
-
-    const album1=document.querySelector(".album1");
-    const album2=document.querySelector(".album2");
-    const album3=document.querySelector(".album3");
-    const album4=document.querySelector(".album4");
-
-     
-
-    let albumlist=[album1,album2,album3,album4];
-
-    let typelist=[student,city,nature,video];
-
-
-    for(let x=0;x<4;x++){
-
-    albumlist[x].addEventListener("click",function (){
-    grid.style.display="none";
-    typelist[x].style.display="block";
-
-    })}
-    const lightbox = document.createElement('div');
-    const img = document.createElement('img');
-    const cross=document.createElement('img');
-
-
-    for(let y=0;y<4;y++){
-    typelist[y].addEventListener("click", function(){
-    document.querySelector("nav").style.display="none";
-    
-    console.log("hello");
-    console.log(event.target.className);
-    const imgsrc=event.target.src;
-
-    cross.src="Assets/Images/cross.svg"
-    cross.style.display="flex";
-    cross.className="cross"
-
-    lightbox.style.display="flex";
-    lightbox.className = "lightbox";
-    body.insertBefore(lightbox, sandwich)
-    lightbox.style.height="100vh";
-
-
-    lightbox.style.backgroundColor="#000";
-     if(event.target.classList.contains("studentimg")){
-        img.src=imgsrc;
-        img.style.display="block";
-        img.className="singimg";
+body.a11y-dark{
+  background-color:#000 !important;
+  color:#fff !important;
 }
 
-    lightbox.appendChild(cross);
-    lightbox.appendChild(img);
+body.a11y-dark .header,
+body.a11y-dark .middle,
+body.a11y-dark .footer,
+body.a11y-dark nav,
+body.a11y-dark .search-wrapper,
+body.a11y-dark .contact-info,
+body.a11y-dark .contact-form,
+body.a11y-dark .fact-left,
+body.a11y-dark .fact-right,
+body.a11y-dark .fact-bottomright,
+body.a11y-dark .fact-bottomleft,
+body.a11y-dark .fact-topleft,
+body.a11y-dark .fact-topright,
+body.a11y-dark .albumbtn,
+body.a11y-dark .a11y-toolbar,
+body.a11y-dark .translate-box{
+  background:#000 !important;
+  color:#fff !important;
+  border-color:#fff !important;
+  box-shadow:none !important;
+}
 
-    cross.addEventListener("click",function(){
-        lightbox.style.display="none";
-        document.querySelector("nav").style.display="block";
+body.a11y-dark .left,
+body.a11y-dark .layer4,
+body.a11y-dark .carousel-item img{
+  filter:brightness(0.7) !important;
+}
 
-    })
-    document.addEventListener("keydown",function(x){
+body.a11y-dark *,
+body.a11y-dark .nav-link,
+body.a11y-dark .contact-form label,
+body.a11y-dark .contact-title,
+body.a11y-dark .carousel-caption-custom,
+body.a11y-dark .EduInfo,
+body.a11y-dark .back{
+  color:#fff !important;
+  border-color:#fff !important;
+}
 
-    if (x.key==="Escape"){
-        lightbox.style.display="none";
-        document.querySelector("nav").style.display="block";
+body.a11y-dark a{
+  color:#fff !important;
+  text-decoration:underline !important;
+}
 
-    }
-    })
-     
-    
-    
- 
-     
+body.a11y-dark input,
+body.a11y-dark textarea,
+body.a11y-dark button,
+body.a11y-dark .btn,
+body.a11y-dark .contact-btn,
+body.a11y-dark .EducationArrowButton,
+body.a11y-dark .goog-te-combo{
+  background:#000 !important;
+  color:#fff !important;
+  border:2px solid #fff !important;
+}
 
-    })}
+body.a11y-dark .icon,
+body.a11y-dark .play{
+  filter:brightness(0) invert(1) !important;
+}
 
- 
+body.a11y-large-text{
+  font-size:1.2rem !important;
+  line-height:1.8 !important;
+}
 
+body.a11y-large-text h1{
+  font-size:3rem !important;
+  line-height:1.2 !important;
+}
 
-</script>
-</body>
- 
-</html>
+body.a11y-large-text h2{
+  font-size:2.5rem !important;
+  line-height:1.2 !important;
+}
+
+body.a11y-large-text h3{
+  font-size:2rem !important;
+  line-height:1.2 !important;
+}
+
+body.a11y-large-text p,
+body.a11y-large-text a,
+body.a11y-large-text li,
+body.a11y-large-text label,
+body.a11y-large-text .nav-link,
+body.a11y-large-text .carousel-caption-custom,
+body.a11y-large-text .EduInfo,
+body.a11y-large-text .contact-title,
+body.a11y-large-text .fact-left,
+body.a11y-large-text .fact-right,
+body.a11y-large-text .fact-bottomright,
+body.a11y-large-text .fact-bottomleft,
+body.a11y-large-text .fact-topleft,
+body.a11y-large-text .fact-topright,
+body.a11y-large-text .back{
+  font-size:inherit !important;
+}
+
+body.a11y-large-text input,
+body.a11y-large-text textarea,
+body.a11y-large-text .search,
+body.a11y-large-text .goog-te-combo{
+  font-size:1.1rem !important;
+  padding:12px !important;
+}
+
+body.a11y-large-text button,
+body.a11y-large-text .btn,
+body.a11y-large-text .contact-btn,
+body.a11y-large-text .EducationArrowButton{
+  font-size:1rem !important;
+  padding:10px 12px !important;
+  white-space:nowrap !important;
+}
+
+body.a11y-contrast{
+  background:#000 !important;
+  color:#ff0 !important;
+}
+
+body.a11y-contrast .header,
+body.a11y-contrast .middle,
+body.a11y-contrast .footer,
+body.a11y-contrast nav,
+body.a11y-contrast .search-wrapper,
+body.a11y-contrast .contact-info,
+body.a11y-contrast .contact-form,
+body.a11y-contrast .fact-left,
+body.a11y-contrast .fact-right,
+body.a11y-contrast .fact-bottomright,
+body.a11y-contrast .fact-bottomleft,
+body.a11y-contrast .fact-topleft,
+body.a11y-contrast .fact-topright,
+body.a11y-contrast .albumbtn,
+body.a11y-contrast .a11y-toolbar,
+body.a11y-contrast .translate-box{
+  background:#000 !important;
+  color:#ff0 !important;
+  border:2px solid #ff0 !important;
+  box-shadow:none !important;
+}
+
+body.a11y-contrast *,
+body.a11y-contrast .nav-link,
+body.a11y-contrast .contact-form label,
+body.a11y-contrast .contact-title,
+body.a11y-contrast .carousel-caption-custom,
+body.a11y-contrast .EduInfo,
+body.a11y-contrast .back{
+  color:#ff0 !important;
+  border-color:#ff0 !important;
+}
+
+body.a11y-contrast a{
+  color:#ff0 !important;
+  text-decoration:underline !important;
+}
+
+body.a11y-contrast input,
+body.a11y-contrast textarea,
+body.a11y-contrast button,
+body.a11y-contrast .btn,
+body.a11y-contrast .contact-btn,
+body.a11y-contrast .EducationArrowButton,
+body.a11y-contrast .goog-te-combo{
+  background:#000 !important;
+  color:#ff0 !important;
+  border:2px solid #ff0 !important;
+}
+
+body.a11y-contrast .icon,
+body.a11y-contrast .play{
+  filter:brightness(0) saturate(100%) invert(92%) sepia(93%) saturate(7499%) hue-rotate(359deg) brightness(105%) contrast(106%) !important;
+}
+
+:focus-visible{
+  outline:4px solid #ffbf47 !important;
+  outline-offset:4px !important;
+}
+
+.a11y-wrapper{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+}
+
+.a11y-toolbar{
+  display:flex;
+  gap:6px;
+  background:#fff;
+  padding:6px 10px;
+  border-radius:10px;
+}
+
+.a11y-toolbar button{
+  padding:6px 10px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  cursor:pointer;
+  background:#fff;
+  color:#000;
+}
+
+.translate-box{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+}
