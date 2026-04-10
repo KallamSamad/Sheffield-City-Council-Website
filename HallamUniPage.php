@@ -3,10 +3,7 @@
   <title>Education</title> <!-- title-->
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="a11y.css"> 
-
+  <link rel="stylesheet" href="style.css"> 
   
   <link 
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
@@ -37,10 +34,12 @@
 
 <!--university info -->
 <ul class="EduInfo">
-  <li>95%–96% of graduates in work or further study 15 months
+  <li>.95%–96% of graduates in work or further study 15 months
  after finishing their studies.</li>
-  <li>Awarded Gold in the 2023 Teaching Excellence Framework (TEF).</li>
-  <li>Largest supplier of graduates to the public sector in the UK, Graduate Outcomes Survey (2022/23) Top 50 for graduate prospects, Complete University Guide (2022)</li>
+  <li>.Awarded Gold in the 2023 Teaching Excellence Framework (TEF).</li>
+  <li>.Largest supplier of graduates to the public sector
+ in the UK, Graduate Outcomes Survey (2022/23) 
+Top 50 for graduate prospects, Complete University Guide (2022)</li>
 <li>Apprenticeship award, Educate North Awards (2024) </li>
 </ul>
 <div>
@@ -90,5 +89,6 @@ if (!empty($CourseSearch)) {   //if statement for when users enter data ( not em
 </div>
  <?php include 'footer.php'; ?> <!-- reference footer-->
 
+<!--nnn-->
 </body>
 </html>
