@@ -10,7 +10,7 @@
       <ul class="navbar-nav w-100 d-flex justify-content-between mb-2 mb-lg-0">
 
         <li class="nav-item">
-          <a class="nav-link text-white" href="HallamFood.php">
+          <a class="nav-link text-white" href="CrimeInSheffield.php">
             <img class="icon" src="Assets/Images/Handcuffs.svg" height="30" width="60" alt="">
             Crime
           </a>
@@ -24,7 +24,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-white" href="CrimeInSheffield.php">
+          <a class="nav-link text-white" href="HallamFood.php">
             <img class="icon" src="Assets/Images/SheUniFood.svg" height="30" width="60" alt="">
             Hallam University Food
           </a>
