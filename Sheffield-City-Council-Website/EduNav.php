@@ -29,14 +29,6 @@
             Hallam University Food
           </a>
         </li>
-
-        <li class="nav-item">    
-            <a class="nav-link text-white" href="Testimonies.php">
-              <img class="icon" src="Assets/Images/speech.svg" height="30" width="60" alt="">
-              Testimonies
-            </a>
-        </li>
-
       </ul>
     </div>
   </div>

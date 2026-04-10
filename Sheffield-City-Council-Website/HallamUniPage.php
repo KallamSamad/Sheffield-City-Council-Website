@@ -116,7 +116,7 @@
         
         if (!$hasResults) {// if no results found, print message 'no courses found'
             echo "<tr><td>No courses Found.</td></tr>";
-        }//
+        }
 
         echo '</table>';// close the courses table
         echo "</div>";// close  flexbox on left side for columns
@@ -167,7 +167,7 @@
     ?>
 
 
-</div>//<!-- closes  main page -->
+</div><!-- closes  main page -->
 
 <?php include 'footer.php'; ?><!-- reference external footer at the bottom-->
 
