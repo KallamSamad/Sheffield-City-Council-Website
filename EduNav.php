@@ -1,4 +1,4 @@
-<nav class="EduNav navbar-expand-lg sticky-top nav">
+<nav class="EduNav navbar-expand-lg nav">
   <div class="container-fluid">
 
  
