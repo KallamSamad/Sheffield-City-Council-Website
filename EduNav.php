@@ -15,6 +15,12 @@
             Crime
           </a>
         </li>
+                <li class="nav-item">
+          <a class="nav-link text-white" href="HallamUniPage.php">
+            <img class="icon" src="Assets/Images/education.svg" height="30" width="60" alt="">
+            Education
+          </a>
+        </li>
 
         <li class="nav-item">
           <a class="nav-link text-white" href="SheffieldUniFood.php">
