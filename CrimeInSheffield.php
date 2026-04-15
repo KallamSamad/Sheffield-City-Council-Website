@@ -1,8 +1,71 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 512 512" xml:space="preserve">
-<polygon style="fill:#FFFFFF;" points="187.368,146.928 187.368,355.8 382.992,251.368 "/>
-<path style="fill:#800000;" d="M256,0.376C114.616,0.376,0,114.824,0,256s114.616,255.624,256,255.624S512,397.176,512,256
-	S397.384,0.376,256,0.376z M184.496,146.928l195.624,104.44L184.496,355.8V146.928z"/>
-</svg>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CrimeInSheffield</title> <!--url title-->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!--font awesome reference for icons-->
+
+  <link rel="stylesheet" href="style.css"> <!--external css-->
+
+  <!--bootstrap reference for styling-->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <script src="IbbyFunctions.js" defer></script>  <!--external js file for functions-->
+</head>
+
+<body>
+
+  <?php include 'nav.php'; ?> <!--nav bar on top of page-->
+  <?php include 'EduNav.php'; ?>
+
+
+  <h1 style="font-size: 42px; font-weight: bold; color: #000; margin-top: 40px; text-align: left;">
+      &emsp;Crime In Sheffield
+  </h1> <!--main page heading-->
+
+  <div style="display: flex; gap: 40px; margin: 40px; align-items: center; flex-wrap: nowrap; justify-content: space-between;"> <!--flexbox, gap and margin for spacing-->
+
+    <div style="position: relative; width: 500px; flex-shrink: 0;"> <!--relative positioning for button and image-->
+
+      <!--button linking to Sheffield Uni food page-->
+      <button class="EducationArrowButton" 
+        style="position: relative; top: 0px; left: 15px; background: maroon; color: white; border: none; padding: 7px 15px; font-weight: bold; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: transform .15s ease, background .15s ease;"
+        onclick="window.location.href='https://www.police.uk/pu/your-area/south-yorkshire-police/sheffield-city-centre/?tab=CrimeMap'">
+         <i class="fa-solid fa-handcuffs"></i> View Crime Statistics <!--font awesome icon for button-->
+      </button>
+
+       <!--main image showing crime summary-->
+      <img src="CrimePic.jpg" alt="Summary Of Crime In Sheffield" style="width: 100%; max-width: 500px; border-radius: 10px; display: block;">
+    </div> 
+
+    <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;"> 
+
+      <!--button to cycle through food info using JS-->
+      <button  class="EducationArrowButton" 
+        style="font-size: 40px; padding: 20px; border: none; background: maroon; color: white; border-radius: 60%; cursor: pointer; transition: transform .15s ease, background .15s ease; margin-bottom: 60px;" 
+        onclick="CycleCrimeInfo()">
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
+
+      <!--text above unordered list-->
+      <p style="font-size: 24px; font-weight: bold; color: #333; margin-bottom: 20px;">
+        Click the arrow to explore more information about crime in sheffield
+      </p>
+
+      <!--list appended to by JS function-->
+      <ul id="CrimeInfoList" style="list-style: disc; font-size: 22px; font-weight: bold; line-height: 1.6; margin-left: 20px; padding-left: 20px;"></ul>
+    </div>
+
+  </div>
+
+  <?php include 'footer.php'; ?> <!--footer included at bottom-->
+
+</body>
+</html>
