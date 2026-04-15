@@ -71,7 +71,7 @@ function initMap() {
 
 <script>
  
-const click= document.querySelector(".btn");
+const click= document.querySelector(".map-btn");
  
 click.addEventListener("click",function(){
 const input = document.querySelector(".search").value;
@@ -99,7 +99,7 @@ geocoder.geocode(request,function(results,status){
     marker=new google.maps.Marker({
     position: newplace,
     map: map,
-    title: input,
+    title: input
 
     
   });
