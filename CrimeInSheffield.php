@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CrimeInSheffield</title> <!--url title-->
+  <title>Safety Of Sheffield</title> <!--url title-->
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!--font awesome reference for icons-->
 
@@ -27,7 +27,7 @@
 
 
   <h1 style="font-size: 42px; font-weight: bold; color: #000; margin-top: 40px; text-align: left;">
-      &emsp;Crime In Sheffield
+      &emsp; Safety Of Sheffield
   </h1> <!--main page heading-->
 
   <div style="display: flex; gap: 40px; margin: 40px; align-items: center; flex-wrap: nowrap; justify-content: space-between;"> <!--flexbox, gap and margin for spacing-->
